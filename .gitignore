@@ -43,3 +43,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Paquetes que instalé (Juani)
+package.json
+package-lock.json

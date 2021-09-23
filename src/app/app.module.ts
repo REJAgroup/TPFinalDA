@@ -11,7 +11,7 @@ import { MenuComponent } from './shared/menu/menu.component';
     AppComponent,
     BebidasComponent,
     SharedComponent,
-    MenuComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule
