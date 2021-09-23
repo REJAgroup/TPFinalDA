@@ -3,8 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-por-marca',
   templateUrl: './por-marca.component.html',
-  styles: [
-  ]
+  styleUrls: ['./por-marca.component.scss']
 })
 export class PorMarcaComponent implements OnInit {
 
