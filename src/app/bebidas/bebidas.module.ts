@@ -9,7 +9,8 @@ import { PorMarcaComponent } from './pages/por-marca/por-marca.component';
     PorMarcaComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PorMarcaComponent
   ]
 })
 export class BebidasModule { }
