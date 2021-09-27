@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav/nav.component';
 import { MenuComponent } from './menu/menu.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { PortadaComponent } from './portada/portada.component';
 
 
 
@@ -10,7 +11,8 @@ import { CarouselComponent } from './carousel/carousel.component';
   declarations: [
     NavComponent,
     MenuComponent,
-    CarouselComponent
+    CarouselComponent,
+    PortadaComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { CarouselComponent } from './carousel/carousel.component';
   exports: [
     NavComponent,
     MenuComponent,
-    CarouselComponent
+    CarouselComponent,
+    PortadaComponent
   ]
 })
 export class SharedModule { }

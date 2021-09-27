@@ -1,5 +1,6 @@
 import {NgModule} from "@angular/core";
 import { PorMarcaComponent } from "./bebidas/pages/por-marca/por-marca.component";
+import { MenuComponent } from "./shared/menu/menu.component";
 import {RouterModule, Routes} from "@angular/router";
 
 

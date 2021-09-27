@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+// fuentes 
+
+@font-face {
+    font-family: 'Ackbar';
+    src: url('assets/fuentes/Ackbar.ttf') format('truetype');
+  }
+@font-face {
+    font-family: '02_APompadourTextSample';
+    src: url('assets/fuentes/02_APompadourTextSample.otf') format('truetype');
+  }
+@font-face {
+    font-family: 'Adam';
+    src: url('assets/fuentes/Adam.ttf') format('truetype');
+  }  
+
+
+
+// HTML 
+html{
+    height: 100%;
+}
+body{
+    background-image: url(assets/back.jpg); 
+    background-size: cover;
+    background-attachment: fixed; // fijo fondo
+    height: 100%;
+}
+
+// navegacion
+/*
+.navbar-brand{
+  
+}
+*/
+
+//portada
+.container-main{
+    background-image: url(assets/cover_portada.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    //background: -webkit-linear-gradient(left,#000000,#e5ff00);
+    //background:opacity($color: #000000)
+}
