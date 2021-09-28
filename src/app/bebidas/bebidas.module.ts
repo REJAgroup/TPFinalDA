@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './pages/home/home.component';
 import { PortadaComponent } from './componentes/portada/portada.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
+import { InfoPagComponent } from './pages/info-pag/info-pag.component';
+import { InfoComponent } from './componentes/info/info.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     PortadaComponent,
-    CarruselComponent
+    CarruselComponent,
+    InfoPagComponent,
+    InfoComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +21,9 @@ import { CarruselComponent } from './componentes/carrusel/carrusel.component';
   exports: [
     HomeComponent,
     PortadaComponent,
-    CarruselComponent
+    CarruselComponent,
+    InfoPagComponent,
+    InfoComponent
   ]
 })
 export class BebidasModule { }
