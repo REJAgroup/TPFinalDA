@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PorMarcaComponent } from './pages/por-marca/por-marca.component';
-
+import { HomeComponent } from './pages/home/home.component';
+import { PortadaComponent } from './componentes/portada/portada.component';
+import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 
 
 @NgModule({
   declarations: [
-    PorMarcaComponent
+    HomeComponent,
+    PortadaComponent,
+    CarruselComponent
   ],
   imports: [
     CommonModule,
-    PorMarcaComponent
+  ],
+  exports: [
+    HomeComponent,
+    PortadaComponent,
+    CarruselComponent
   ]
 })
 export class BebidasModule { }
