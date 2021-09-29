@@ -5,6 +5,7 @@ import { PortadaComponent } from './componentes/portada/portada.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { InfoPagComponent } from './pages/info-pag/info-pag.component';
 import { InfoComponent } from './componentes/info/info.component';
+import { MapaComponent } from './componentes/mapa/mapa.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { InfoComponent } from './componentes/info/info.component';
     PortadaComponent,
     CarruselComponent,
     InfoPagComponent,
-    InfoComponent
+    InfoComponent,
+    MapaComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { InfoComponent } from './componentes/info/info.component';
     PortadaComponent,
     CarruselComponent,
     InfoPagComponent,
-    InfoComponent
+    InfoComponent,
+    MapaComponent
   ]
 })
 export class BebidasModule { }

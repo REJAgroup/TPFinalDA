@@ -17,9 +17,10 @@
 // HTML 
 html{
     height: 100%;
+    width: 100%;
 }
 body{
-    background-image: url(assets/back.jpg); 
+    background-image: url(assets/backblackwood.jpg); 
     background-size: cover;
     background-attachment: fixed; // fijo fondo
     height: 100%;
@@ -34,7 +35,7 @@ body{
 
 //portada
 .container-main{
-    background-image: url(assets/cover_portada.jpg);
+    background-image: url(assets/portadaSatur.jpg);
     background-size: cover;
     background-attachment: fixed;
     height: 55%;

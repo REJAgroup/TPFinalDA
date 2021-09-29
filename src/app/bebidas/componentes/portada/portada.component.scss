@@ -1,9 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Prompt:wght@600&display=swap');
+
 .row{
     color: white;
 }
 .titulo_port{
     text-align: center;
+    font-family: 'Prompt', sans-serif;
+    font-size: 65px;
+    font-weight: 100px;
+    animation: cambio-color 3s infinite alternate;
+    text-shadow: 1px 0px rgba(230,230,230,1), 2px 2px 0px rgba(200,200,200,1), 3px 3px 0px rgba(180,180,180,1), 4px 4px 0px rgba(160,160,160,1),5px 5px 0px rgba(230,230,230,1), 8px 8px 20px rgba(230,230,230,0.5);
 }
+
+@keyframes cambio-color{
+    from {
+    color:#000000;
+    }
+    to {
+    color:#d8db03;
+    }
+} 
+
 .subtitulo_port{
     text-align: center;
+    font-family: 'Cairo', sans-serif;
+    font-size: 30px;
+    margin-top: 10px;
+    //text-shadow: 1px 0px rgb(0, 0, 0), 2px 2px 0px;
 }
