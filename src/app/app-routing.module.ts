@@ -5,6 +5,7 @@ import { HomeComponent } from "./bebidas/pages/home/home.component";
 import { InfoComponent } from "./bebidas/componentes/info/info.component";
 
 
+
 const routes: Routes = [
     {
       path: "",
@@ -20,8 +21,7 @@ const routes: Routes = [
       path: "info",
       component: InfoComponent,
       pathMatch: 'full'
-    }
-    
+    }  
 ]
 
 @NgModule({
