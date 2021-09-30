@@ -6,10 +6,12 @@ import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { InfoPagComponent } from './pages/info-pag/info-pag.component';
 import { InfoComponent } from './componentes/info/info.component';
 import { MapaComponent } from './componentes/mapa/mapa.component';
+import { ComponentContactoComponent } from './componentes/component-contacto/component-contacto.component';
 
 
 @NgModule({
   declarations: [
+    ComponentContactoComponent,
     HomeComponent,
     PortadaComponent,
     CarruselComponent,
@@ -26,7 +28,8 @@ import { MapaComponent } from './componentes/mapa/mapa.component';
     CarruselComponent,
     InfoPagComponent,
     InfoComponent,
-    MapaComponent
+    MapaComponent,
+    ComponentContactoComponent
   ]
 })
 export class BebidasModule { }
