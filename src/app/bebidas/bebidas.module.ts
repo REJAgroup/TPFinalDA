@@ -8,10 +8,12 @@ import { InfoComponent } from './componentes/info/info.component';
 import { MapaComponent } from './componentes/mapa/mapa.component';
 import { TablaKiosComponent } from './componentes/tabla-kios/tabla-kios.component';
 import { RouterModule } from '@angular/router';
+import { ComponentContactoComponent } from './componentes/component-contacto/component-contacto.component';
 
 
 @NgModule({
   declarations: [
+    ComponentContactoComponent,
     HomeComponent,
     PortadaComponent,
     CarruselComponent,
@@ -31,7 +33,8 @@ import { RouterModule } from '@angular/router';
     InfoPagComponent,
     InfoComponent,
     MapaComponent,
-    TablaKiosComponent
+    TablaKiosComponent,
+    ComponentContactoComponent
   ]
 })
 export class BebidasModule { }

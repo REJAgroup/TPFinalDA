@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "-": "^0.0.1",
     "@angular-devkit/build-angular": "^12.2.7",
     "@angular/animations": "~12.2.0",
     "@angular/cdk": "^12.2.8",
@@ -22,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
     "bootstrap": "^5.1.1",
+    "g": "^2.0.1",
     "mapbox-gl": "^2.4.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
