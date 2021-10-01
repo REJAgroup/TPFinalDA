@@ -5,6 +5,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BebidasModule } from './bebidas/bebidas.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BebidasModule } from './bebidas/bebidas.module';
     HttpClientModule,
     SharedModule,
     BebidasModule,
-    AppRoutingModule 
+    AppRoutingModule,
+    BrowserAnimationsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

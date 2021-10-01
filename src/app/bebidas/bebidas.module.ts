@@ -6,6 +6,8 @@ import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { InfoPagComponent } from './pages/info-pag/info-pag.component';
 import { InfoComponent } from './componentes/info/info.component';
 import { MapaComponent } from './componentes/mapa/mapa.component';
+import { TablaKiosComponent } from './componentes/tabla-kios/tabla-kios.component';
+import { RouterModule } from '@angular/router';
 import { ComponentContactoComponent } from './componentes/component-contacto/component-contacto.component';
 
 
@@ -17,10 +19,12 @@ import { ComponentContactoComponent } from './componentes/component-contacto/com
     CarruselComponent,
     InfoPagComponent,
     InfoComponent,
-    MapaComponent
+    MapaComponent,
+    TablaKiosComponent
   ],
   imports: [
     CommonModule,
+    RouterModule
   ],
   exports: [
     HomeComponent,
@@ -29,6 +33,7 @@ import { ComponentContactoComponent } from './componentes/component-contacto/com
     InfoPagComponent,
     InfoComponent,
     MapaComponent,
+    TablaKiosComponent,
     ComponentContactoComponent
   ]
 })

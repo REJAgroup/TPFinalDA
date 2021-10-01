@@ -8,6 +8,6 @@ export class BebidasService {
 
   constructor(private http: HttpClient) { };
 
-  private apiUrl:string = 'https://614ba83ee4cc2900179eb18b.mockapi.io/bebidas';
+  private apiUrl:string = 'https://614ba83ee4cc2900179eb18b.mockapi.io/kioskos';
 
 }
