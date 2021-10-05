@@ -6,8 +6,9 @@ import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { InfoPagComponent } from './pages/info-pag/info-pag.component';
 import { InfoComponent } from './componentes/info/info.component';
 import { MapaComponent } from './componentes/mapa/mapa.component';
-import { TablaKiosComponent } from './componentes/tabla-kios/tabla-kios.component';
 import { RouterModule } from '@angular/router';
+import { KioskosComponent } from './componentes/kioskos/kioskos.component';
+import { BusquedaPagComponent } from './pages/busqueda-pag/busqueda-pag.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
     InfoPagComponent,
     InfoComponent,
     MapaComponent,
-    TablaKiosComponent
+    KioskosComponent,
+    BusquedaPagComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,7 @@ import { RouterModule } from '@angular/router';
     InfoPagComponent,
     InfoComponent,
     MapaComponent,
-    TablaKiosComponent
+    KioskosComponent
   ]
 })
 export class BebidasModule { }
