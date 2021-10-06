@@ -9,6 +9,7 @@ import { MapaComponent } from './componentes/mapa/mapa.component';
 import { TablaKiosComponent } from './componentes/tabla-kios/tabla-kios.component';
 import { RouterModule } from '@angular/router';
 import { ComponentContactoComponent } from './componentes/component-contacto/component-contacto.component';
+import { CardComponent } from './componentes/card/card.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ComponentContactoComponent } from './componentes/component-contacto/com
     InfoPagComponent,
     InfoComponent,
     MapaComponent,
-    TablaKiosComponent
+    TablaKiosComponent,
+    CardComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import { ComponentContactoComponent } from './componentes/component-contacto/com
     InfoComponent,
     MapaComponent,
     TablaKiosComponent,
-    ComponentContactoComponent
+    ComponentContactoComponent,
+    CardComponent
   ]
 })
 export class BebidasModule { }
