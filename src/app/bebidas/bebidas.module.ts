@@ -1,28 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { PortadaComponent } from './componentes/portada/portada.component';
 import { CarruselComponent } from './componentes/carrusel/carrusel.component';
-import { InfoPagComponent } from './pages/info-pag/info-pag.component';
 import { InfoComponent } from './componentes/info/info.component';
 import { MapaComponent } from './componentes/mapa/mapa.component';
 import { TablaKiosComponent } from './componentes/tabla-kios/tabla-kios.component';
-import { RouterModule } from '@angular/router';
-import { ComponentContactoComponent } from './componentes/component-contacto/component-contacto.component';
 import { CardComponent } from './componentes/card/card.component';
+import { KioskosComponent } from './pages/kioskos/kioskos.component';
+import { MapaPagComponent } from './pages/mapa-pag/mapa-pag.component';
+
 
 
 @NgModule({
   declarations: [
-    ComponentContactoComponent,
     HomeComponent,
     PortadaComponent,
     CarruselComponent,
-    InfoPagComponent,
     InfoComponent,
     MapaComponent,
     TablaKiosComponent,
     CardComponent,
+    KioskosComponent,
+    MapaPagComponent
   ],
   imports: [
     CommonModule,
@@ -32,12 +33,11 @@ import { CardComponent } from './componentes/card/card.component';
     HomeComponent,
     PortadaComponent,
     CarruselComponent,
-    InfoPagComponent,
-    InfoComponent,
     MapaComponent,
     TablaKiosComponent,
-    ComponentContactoComponent,
-    CardComponent
+    CardComponent,
+    KioskosComponent,
+    MapaPagComponent
   ]
 })
 export class BebidasModule { }

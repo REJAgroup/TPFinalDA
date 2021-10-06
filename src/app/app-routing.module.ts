@@ -1,7 +1,8 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
 import { HomeComponent } from "./bebidas/pages/home/home.component";
-import { InfoPagComponent } from "./bebidas/pages/info-pag/info-pag.component";
+import { KioskosComponent } from "./bebidas/pages/kioskos/kioskos.component";
+import { MapaPagComponent } from "./bebidas/pages/mapa-pag/mapa-pag.component";
 
 
 const routes: Routes = [
@@ -11,8 +12,12 @@ const routes: Routes = [
       pathMatch: 'full'
     },
     {
-      path: "infoPag",
-      component: InfoPagComponent,
+      path: "kioskos",
+      component: KioskosComponent,
+    },
+    {
+      path: "mapaPag",
+      component: MapaPagComponent,
     },
     {
       path: '**',
