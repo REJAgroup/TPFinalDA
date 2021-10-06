@@ -8,6 +8,6 @@ Dentro de la misma podremos ver donde esta ubicado el local y si esta abierto al
 
 Aplicación creada por REJA group
 
-# Info Angular
+## Info Angular
 
 Proyecto generado con [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
