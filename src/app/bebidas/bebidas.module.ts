@@ -12,6 +12,7 @@ import { KioskosComponent } from './pages/kioskos/kioskos.component';
 import { MapaPagComponent } from './pages/mapa-pag/mapa-pag.component';
 import { SharedModule } from '../shared/shared.module';
 import { VerKioskoPagComponent } from './pages/ver-kiosko-pag/ver-kiosko-pag.component';
+import { CrudComponent } from './pages/crud/crud.component';
 
 
 
@@ -26,7 +27,8 @@ import { VerKioskoPagComponent } from './pages/ver-kiosko-pag/ver-kiosko-pag.com
     CardComponent,
     KioskosComponent,
     MapaPagComponent,
-    VerKioskoPagComponent
+    VerKioskoPagComponent,
+    CrudComponent
   ],
   imports: [
     CommonModule,

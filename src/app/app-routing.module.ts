@@ -1,5 +1,6 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
+import { CrudComponent } from "./bebidas/pages/crud/crud.component";
 import { HomeComponent } from "./bebidas/pages/home/home.component";
 import { KioskosComponent } from "./bebidas/pages/kioskos/kioskos.component";
 import { MapaPagComponent } from "./bebidas/pages/mapa-pag/mapa-pag.component";
@@ -23,6 +24,10 @@ const routes: Routes = [
     {
       path: "kiosko/:id",
       component: VerKioskoPagComponent,
+    },
+    {
+      path: "admin",
+      component:CrudComponent,
     },
     {
       path: '**',
