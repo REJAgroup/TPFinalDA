@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Kiosko } from '../../interfaces/kiosko.inteface';
 
 @Component({
   selector: 'app-tabla-kios',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablaKiosComponent implements OnInit {
 
+ @Input () kiosko : Kiosko | undefined ;
+  
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

@@ -10,6 +10,8 @@ import { TablaKiosComponent } from './componentes/tabla-kios/tabla-kios.componen
 import { CardComponent } from './componentes/card/card.component';
 import { KioskosComponent } from './pages/kioskos/kioskos.component';
 import { MapaPagComponent } from './pages/mapa-pag/mapa-pag.component';
+import { SharedModule } from '../shared/shared.module';
+import { VerKioskoPagComponent } from './pages/ver-kiosko-pag/ver-kiosko-pag.component';
 
 
 
@@ -23,11 +25,13 @@ import { MapaPagComponent } from './pages/mapa-pag/mapa-pag.component';
     TablaKiosComponent,
     CardComponent,
     KioskosComponent,
-    MapaPagComponent
+    MapaPagComponent,
+    VerKioskoPagComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   exports: [
     HomeComponent,

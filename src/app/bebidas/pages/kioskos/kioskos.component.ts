@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Kiosko } from '../../interfaces/kiosko.inteface';
+import { BebidasService } from '../../services/bebidas.service';
 
 @Component({
   selector: 'app-kioskos',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KioskosComponent implements OnInit {
 
-  constructor() { }
+  kioskos : Kiosko[] = [];  
+
+  constructor(private __bebidasService : BebidasService) { }
 
   ngOnInit(): void {
+    this.__bebidasService.mostrarKioskios().subscribe(kioskos => {
+      this.kioskos=kioskos
+    });
   }
 
 }
