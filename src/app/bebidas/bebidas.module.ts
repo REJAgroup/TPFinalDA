@@ -29,7 +29,7 @@ import { ComponentContactoComponent } from './componentes/component-contacto/com
     InfoPagComponent,
     InfoComponent,
     MapaComponent,
-    ComponentContactoComponent
+    ComponentContactoComponent,
   ]
 })
 export class BebidasModule { }
