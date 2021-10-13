@@ -16,6 +16,10 @@ export class VerKioskoPagComponent implements OnInit {
   constructor(private __bebidasService : BebidasService, private kiosko : ActivatedRoute) { }
 
   ngOnInit(): void {
+    
+    
+    
+    
     this.kiosko.params.pipe(switchMap(({id}) => 
     this.__bebidasService.verKioskio(id))).subscribe(respID => {
       this.verKioskos = respID; 

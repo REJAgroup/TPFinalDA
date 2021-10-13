@@ -15,7 +15,7 @@ export class KioskosComponent implements OnInit {
 
   ngOnInit(): void {
     this.__bebidasService.mostrarKioskios().subscribe(kioskos => {
-      this.kioskos=kioskos
+    this.kioskos=kioskos
     });
   }
 
