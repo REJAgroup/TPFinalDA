@@ -14,6 +14,7 @@ import { SharedModule } from '../shared/shared.module';
 import { VerKioskoPagComponent } from './pages/ver-kiosko-pag/ver-kiosko-pag.component';
 import { CrudComponent } from './pages/crud/crud.component';
 import { ErrorPagComponent } from './pages/error-pag/error-pag.component';
+import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
 
 
 
@@ -30,7 +31,8 @@ import { ErrorPagComponent } from './pages/error-pag/error-pag.component';
     MapaPagComponent,
     VerKioskoPagComponent,
     CrudComponent,
-    ErrorPagComponent
+    ErrorPagComponent,
+    ComentariosComponent
   ],
   imports: [
     CommonModule,
@@ -41,11 +43,16 @@ import { ErrorPagComponent } from './pages/error-pag/error-pag.component';
     HomeComponent,
     PortadaComponent,
     CarruselComponent,
+    InfoComponent,
     MapaComponent,
     TablaKiosComponent,
     CardComponent,
     KioskosComponent,
-    MapaPagComponent
+    MapaPagComponent,
+    VerKioskoPagComponent,
+    CrudComponent,
+    ErrorPagComponent,
+    ComentariosComponent
   ]
 })
 export class BebidasModule { }

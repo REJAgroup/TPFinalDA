@@ -1,0 +1,14 @@
+<link href="../comentarios/comentarios.component.scss" rel="stylesheet">
+<script href="../comentarios/comentarios.component.ts" type="text/javascript"></script>
+<body>
+    <h2>Preguntale al vendedor</h2> <!-- {{ pregunta }} -->
+<textarea id="pregunta" name="pregunta" rows="2" cols="50" placeholder="Escribe tu pregunta..." maxlength="300"></textarea><button><strong>Preguntar</strong></button>
+<br><br><h2>Comentarios</h2>
+<ul>
+    <li><textarea id="comentarios" name="comentarios" rows="10" cols="50" placeholder="Escribe algún comentario..." maxlength="300"></textarea></li>
+    <li id="enviar"><input type="submit"></li>
+</ul>
+
+</body>
+
+<!-- (click)="enviarPregunta()" -->

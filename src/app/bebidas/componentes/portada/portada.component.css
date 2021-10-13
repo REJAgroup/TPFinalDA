@@ -1,12 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Prompt:wght@600&display=swap");
 .row {
   color: white;
 }
 
 .titulo_port {
   text-align: center;
+  font-family: 'Prompt', sans-serif;
+  font-size: 65px;
+  font-weight: 100px;
+  -webkit-animation: cambio-color 3s infinite alternate;
+          animation: cambio-color 3s infinite alternate;
+  text-shadow: 1px 0px #e6e6e6, 2px 2px 0px #c8c8c8, 3px 3px 0px #b4b4b4, 4px 4px 0px #a0a0a0, 5px 5px 0px #e6e6e6, 8px 8px 20px rgba(230, 230, 230, 0.5);
+}
+
+@-webkit-keyframes cambio-color {
+  from {
+    color: #000000;
+  }
+  to {
+    color: #d8db03;
+  }
+}
+
+@keyframes cambio-color {
+  from {
+    color: #000000;
+  }
+  to {
+    color: #d8db03;
+  }
 }
 
 .subtitulo_port {
   text-align: center;
+  font-family: 'Cairo', sans-serif;
+  font-size: 30px;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=portada.component.css.map */

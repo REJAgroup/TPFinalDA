@@ -27,4 +27,17 @@ export class BebidasService {
 
 
 
+ 
+  agregarKiosko(kiosko:Kiosko): Observable<Kiosko>{
+    return this.http.post<Kiosko>(`${this.apiUrl}`, kiosko);
+  }
+
+  editarKiosko(kiosko:Kiosko): Observable<Kiosko>{
+    return this.http.put<Kiosko>(`${this.apiUrl}/${kiosko.id}`, kiosko);
+  }
+  
+  eliminarKiosko(id:string|undefined): Observable<any>{
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
+
+  }
 }

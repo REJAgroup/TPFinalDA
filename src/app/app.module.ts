@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BebidasModule } from './bebidas/bebidas.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 @NgModule({
   declarations: [
     AppComponent
