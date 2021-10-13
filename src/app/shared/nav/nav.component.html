@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="">
-      <img src="/assets/icon_kios.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+    <a class="navbar-brand" routerLink="" routerLinkActive="active">
+      <img src="/assets/Iconos/icon_kios.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
     </a> 
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
@@ -12,7 +12,15 @@
               Mapa
         </a>
       </ul>
-      
+      <a class="navbar-brand remove-bg" routerLink="admin" routerLinkActive="active">
+        <img src="/assets/Iconos/userico.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+      </a> 
+      <form class="d-flex" (onEnter)="buscar(termino)" autocomplete="off">
+        <input class="form-control me-2" type="text" name= "termino" placeholder="Qué buscamos?" aria-label="Search">
+        <button class="btn btn-outline-light" type="text" (onClick)="buscar(termino)">Buscar</button>
+      </form>
     </div>
   </div>
 </nav>
+
+

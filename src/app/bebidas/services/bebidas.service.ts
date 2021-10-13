@@ -15,10 +15,16 @@ export class BebidasService {
 
   mostrarKioskios (): Observable <Kiosko[]>{
    return this.http.get<Kiosko[]> (this.apiUrl);
-}
-
+  }
   verKioskio (id:string): Observable <Kiosko>{
   return this.http.get<Kiosko> (`${this.apiUrl}/${id}`);
-}
+  }
+
+  buscarKiosko(termino: string): Observable<Kiosko[]> {
+  const url = `${this.apiUrl}/name/${termino}`;
+  return this.http.get<Kiosko[]>(url);
+  }
+
+
 
 }

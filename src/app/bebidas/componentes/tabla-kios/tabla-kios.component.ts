@@ -8,9 +8,8 @@ import { Kiosko } from '../../interfaces/kiosko.inteface';
 })
 export class TablaKiosComponent implements OnInit {
 
- @Input () kiosko : Kiosko | undefined ;
+  @Input () kiosko : Kiosko | undefined ;
   
-
   constructor() { }
 
   ngOnInit(): void {

@@ -18,10 +18,9 @@ export class CrudComponent implements OnInit {
 
   }
 
-
- mostrar(){this.__bebidasService.mostrarKioskios().subscribe(kioskos=>{
-   this.kioskos = kioskos;
- })
+  mostrar(){this.__bebidasService.mostrarKioskios().subscribe(kioskos=>{
+    this.kioskos = kioskos;
+  })
 
 }
 
