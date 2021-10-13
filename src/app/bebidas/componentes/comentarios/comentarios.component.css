@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2? family = Maven + Pro & display = swap");
+body {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000000;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+h2, h3 {
+  color: #ffffff;
+}
+
+#pregunta {
+  font-size: 18px;
+  border-color: #3484fa;
+  border-radius: 10px;
+  border-width: 5px;
+  float: left;
+  margin-left: 220px;
+}
+
+#pregunta[placeholder] {
+  padding-top: 20px;
+  padding-left: 5px;
+}
+
+button {
+  background-color: #3484fa;
+  width: 120px;
+  height: 60px;
+  margin-top: 5px;
+  border-radius: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+#comentarios[placeholder] {
+  padding-left: 0px;
+  font-size: 18px;
+  padding: 5px 0px 0px 5px;
+  margin-left: 220px;
+}
+
+#enviar input {
+  background-color: #3484fa;
+  width: 120px;
+  height: 60px;
+  margin-top: 5px;
+  border-radius: 10px;
+  margin-left: 200px;
+  font-size: 18px;
+  font-weight: 150px;
+  margin-left: 400px;
+}
+/*# sourceMappingURL=comentarios.component.css.map */
