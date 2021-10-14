@@ -1,7 +1,8 @@
+<br><br><br>
 <div class="container">
     <table class="table">
         <thead>
-          <tr class = "table-warning text-center">
+          <tr class = "table-dark text-center">
             <th scope="col">Nombre</th>
             <th scope="col">Avatar</th>
             <th scope="col">Descripcion</th>
@@ -10,7 +11,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let kiosko of kioskos" class="text-center">
+          <tr *ngFor="let kiosko of kioskos" class="table-light text-center">
             <td>{{kiosko.name}}</td>
             <td><img [src]="kiosko.avatar" [alt]="kiosko.name" class="rounded-circle" width="50px" height="50px"></td>
            
