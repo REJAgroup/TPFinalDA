@@ -18,7 +18,7 @@ export class MapaComponent implements OnInit {
       const map = new mapboxgl.Map({
       container: 'mapa-mapbox', // container ID
       style: 'mapbox://styles/mapbox/streets-v11', // style URL
-      center: [-68.5386537,-31.5353014], // LGT , LAT 
+      center: [-68.567136,-31.5256581], // LGT , LAT 
       zoom: 15 // starting zoom
       });
       
