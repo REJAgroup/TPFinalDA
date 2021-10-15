@@ -1,27 +1,8 @@
 <br>
 <!-- botón del modal -->
 <div class="container">
-  <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="exampleModal">Añadir Kiosko/Local</button>
+  <button class="btn btn-light" type="button">Añadir Kiosko/Local</button>
 </div> <br>
-  <!-- Modal Nuevo Kiosko-->
-<div class="modal fade" id="exampleModal" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Nuevo Kiosko</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Buenas!
-      </div>
-      <div class="modal-footer">
-    
-        <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Guardar</button>
-      </div>
-    </div>
-  </div>
-</div>
-  <!-- End Modal -->
 
 <div class="container">
     <table class="table">
@@ -47,3 +28,22 @@
         </tbody>
       </table>
 </div>
+
+<form (ngSubmit)="crearKiosko()" *ngIf="formCreateKiosko" class="container p-3 my-3 bg-dark text-white" [formGroup]="formCreateKiosko">
+  <div  class="col-md-6">
+    <label class="form-label">Nombre</label>
+    <input type="text" class="form-control" formControlName="nombre">
+  </div>
+  <div class="col-md-6">
+    <label for="inputAddress2" class="form-label">Descripcion</label>
+    <input type="text" class="form-control" formControlName="descripcion">
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">Avatar</label>
+    <input type="text" class="form-control" formControlName="avatar">
+  </div>
+  <div class="col-12">
+    <br><button type="submit" class="btn btn-outline-light" id="crearKiosko" >
+      Crear</button>
+  </div>
+</form> <br>

@@ -6,7 +6,6 @@ import { KioskosComponent } from "./bebidas/pages/kioskos/kioskos.component";
 import { MapaPagComponent } from "./bebidas/pages/mapa-pag/mapa-pag.component";
 import { VerKioskoPagComponent } from "./bebidas/pages/ver-kiosko-pag/ver-kiosko-pag.component";
 
-
 const routes: Routes = [
     {
       path: "",

@@ -26,8 +26,6 @@ export class BebidasService {
   }
 
 
-
- 
   agregarKiosko(kiosko:Kiosko): Observable<Kiosko>{
     return this.http.post<Kiosko>(`${this.apiUrl}`, kiosko);
   }
