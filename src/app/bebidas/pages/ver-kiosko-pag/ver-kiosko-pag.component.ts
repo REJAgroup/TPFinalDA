@@ -3,6 +3,7 @@ import { Kiosko } from '../../interfaces/kiosko.inteface';
 import { BebidasService } from '../../services/bebidas.service';
 import { switchMap } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
+import { Comentario } from '../../interfaces/comentario.inteface';
 
 @Component({
   selector: 'app-ver-kiosko-pag',
@@ -11,20 +12,21 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class VerKioskoPagComponent implements OnInit {
 
-    verKioskos! : Kiosko;  
+    verKioskos! : Kiosko;
+    comentarios : Comentario[] = [] ;
 
   constructor(private __bebidasService : BebidasService, private kiosko : ActivatedRoute) { }
 
   ngOnInit(): void {
-    
-    
-    
-    
+  
     this.kiosko.params.pipe(switchMap(({id}) => 
     this.__bebidasService.verKioskio(id))).subscribe(respID => {
       this.verKioskos = respID; 
     })
+    
 
   }
+
+
 
 }
