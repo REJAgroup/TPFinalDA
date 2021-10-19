@@ -25,9 +25,6 @@ export class BebidasService {
   return this.http.get<Kiosko[]>(url);
   }
 
-
-
- 
   agregarKiosko(kiosko:Kiosko): Observable<Kiosko>{
     return this.http.post<Kiosko>(`${this.apiUrl}`, kiosko);
   }

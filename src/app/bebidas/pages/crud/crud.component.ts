@@ -48,11 +48,9 @@ guardar(){
 
 eliminar(id:string){
   this.__bebidasService.eliminarKiosko(id!).subscribe(kiosko => {
-    if(kiosko = 100){
+    if(kiosko = 200){
       this.mostrar()
     }
   })
 }
-
-
 }
