@@ -10,7 +10,10 @@ import { BebidasService } from '../../services/bebidas.service';
   styleUrls: ['./crud.component.scss']
 })
 export class CrudComponent implements OnInit {
-   kioskos : Kiosko [] = [];
+   
+  
+  
+  kioskos : Kiosko [] = [];
    formCreateKiosko : FormGroup | undefined = undefined;
 
    kiosko:Kiosko = {
@@ -20,16 +23,13 @@ export class CrudComponent implements OnInit {
      descripcion: ''
    }
 
-
-
-
   constructor(private __bebidasService : BebidasService, private formBuilder : FormBuilder) { }
   
   ngOnInit(): void {
     this.mostrar();
 
     this.formCreateKiosko = this.formBuilder.group({
-      "nombre": new FormControl(),
+      "name": new FormControl(),
       "descripcion": new FormControl(),
       "avatar": new FormControl()
     });
@@ -37,24 +37,24 @@ export class CrudComponent implements OnInit {
   }
 
 
- mostrar(){this.__bebidasService.mostrarKioskios().subscribe(kiosko=>{
-   this.kioskos = kiosko;
- })
+  mostrar(){this.__bebidasService.mostrarKioskios().subscribe(kiosko=>{
+    this.kioskos = kiosko;
 
-}
+  })
+  }
 
-    guardar(){
-      if(this.kiosko.id){
-        this.__bebidasService.editarKiosko(this.kiosko).subscribe(kiosko => {
-          this.mostrar();
-        })
-      }
-      else{
-        this.__bebidasService.agregarKiosko(this.kiosko).subscribe(kiosko => {
-          this.mostrar();
-        })
-      }
+  guardar(){
+    if(this.kiosko.id){
+      this.__bebidasService.editarKiosko(this.kiosko).subscribe(kiosko => {
+        this.mostrar();
+      })
     }
+    else{
+      this.__bebidasService.agregarKiosko(this.kiosko).subscribe(kiosko => {
+        this.mostrar();
+      })
+    }
+  }
 
     eliminar(id:string){
       this.__bebidasService.eliminarKiosko(id!).subscribe(kiosko => {
@@ -63,14 +63,14 @@ export class CrudComponent implements OnInit {
         }
       })
     }
-    
+
+
     crearKiosko(){
       let kioskosss = this.formCreateKiosko?.value;
       console.log(kioskosss);
       this.__bebidasService.agregarKiosko(kioskosss).subscribe(kiosko =>{
-        console.log(kiosko);
+      console.log(kiosko);
       })
-
     }
 
 
