@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { subscribeOn } from 'rxjs/operators';
 import { Kiosko } from '../../interfaces/kiosko.inteface';
 import { BebidasService } from '../../services/bebidas.service';
@@ -9,7 +10,11 @@ import { BebidasService } from '../../services/bebidas.service';
   styleUrls: ['./crud.component.scss']
 })
 export class CrudComponent implements OnInit {
-   kioskos : Kiosko [] = [];
+   
+  
+  
+  kioskos : Kiosko [] = [];
+   formCreateKiosko : FormGroup | undefined = undefined;
 
    kiosko:Kiosko = {
      id : '',
@@ -18,39 +23,57 @@ export class CrudComponent implements OnInit {
      descripcion: ''
    }
 
-
-  constructor(private __bebidasService : BebidasService) { }
+  constructor(private __bebidasService : BebidasService, private formBuilder : FormBuilder) { }
   
   ngOnInit(): void {
     this.mostrar();
 
+    this.formCreateKiosko = this.formBuilder.group({
+      "name": new FormControl(),
+      "descripcion": new FormControl(),
+      "avatar": new FormControl()
+    });
+
   }
 
 
- mostrar(){this.__bebidasService.mostrarKioskios().subscribe(kiosko=>{
-   this.kioskos = kiosko;
- })
+  mostrar(){this.__bebidasService.mostrarKioskos().subscribe(kiosko=>{
+    this.kioskos = kiosko;
 
-}
-
-guardar(){
-  if(this.kiosko.id){
-    this.__bebidasService.editarKiosko(this.kiosko).subscribe(kiosko => {
-      this.mostrar();
-    })
-  }
-  else{
-    this.__bebidasService.agregarKiosko(this.kiosko).subscribe(kiosko => {
-      this.mostrar();
-    })
-  }
-}
-
-eliminar(id:string){
-  this.__bebidasService.eliminarKiosko(id!).subscribe(kiosko => {
-    if(kiosko = 200){
-      this.mostrar()
-    }
   })
-}
+  }
+
+   editar(){
+       this.__bebidasService.editarKiosko(this.kiosko).subscribe(kiosko => {
+       this.mostrar();
+       })
+     }  
+  
+
+    eliminar(id:string){
+      this.__bebidasService.eliminarKiosko(id!).subscribe(kiosko => {
+      this.mostrar();
+     })
+    }
+
+
+    crearKiosko(){
+      //let kioskosss = this.formCreateKiosko?.value;
+     // console.log(kioskosss);
+      this.__bebidasService.agregarKiosko(this.kiosko).subscribe(kiosko =>{
+      this.mostrar();
+      console.log(kiosko);
+      })
+    }
+
+    id(id:string){
+      this.__bebidasService.verKioskio(id).subscribe(kiosko => {
+        this.kiosko = kiosko;
+        });
+      
+      
+
+      
+    }
+
 }

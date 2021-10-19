@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { PortadaComponent } from './componentes/portada/portada.component';
-import { CarruselComponent } from './componentes/carrusel/carrusel.component';
 import { InfoComponent } from './componentes/info/info.component';
 import { MapaComponent } from './componentes/mapa/mapa.component';
 import { TablaKiosComponent } from './componentes/tabla-kios/tabla-kios.component';
@@ -15,6 +14,8 @@ import { VerKioskoPagComponent } from './pages/ver-kiosko-pag/ver-kiosko-pag.com
 import { CrudComponent } from './pages/crud/crud.component';
 import { ErrorPagComponent } from './pages/error-pag/error-pag.component';
 import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
+import { ImgNavComponent } from './componentes/img-nav/img-nav.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -22,7 +23,6 @@ import { ComentariosComponent } from './componentes/comentarios/comentarios.comp
   declarations: [
     HomeComponent,
     PortadaComponent,
-    CarruselComponent,
     InfoComponent,
     MapaComponent,
     TablaKiosComponent,
@@ -32,17 +32,19 @@ import { ComentariosComponent } from './componentes/comentarios/comentarios.comp
     VerKioskoPagComponent,
     CrudComponent,
     ErrorPagComponent,
-    ComentariosComponent
+    ComentariosComponent,
+    ImgNavComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     HomeComponent,
     PortadaComponent,
-    CarruselComponent,
     InfoComponent,
     MapaComponent,
     TablaKiosComponent,
@@ -52,7 +54,8 @@ import { ComentariosComponent } from './componentes/comentarios/comentarios.comp
     VerKioskoPagComponent,
     CrudComponent,
     ErrorPagComponent,
-    ComentariosComponent
+    ComentariosComponent,
+    ImgNavComponent
   ]
 })
 export class BebidasModule { }

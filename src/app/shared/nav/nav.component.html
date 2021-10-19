@@ -4,22 +4,24 @@
       <img src="/assets/Iconos/icon_kios.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
     </a> 
     <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <a routerLink="kioskos" routerLinkActive="active" class="nav-link active" aria-current="page">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          
+          <a routerLink="kioskos" routerLinkActive="active" class="nav-link" aria-current="page">
               Kioskos
           </a>
          
-          <a routerLink="mapaPag" routerLinkActive="active" class="nav-link active" aria-current="page">
+          <a routerLink="mapaPag" routerLinkActive="active" class="nav-link" aria-current="page">
               Mapa
-        </a>  
-      </ul>
+          </a>   
+    
+        </ul>
       <a class="navbar-brand remove-bg" routerLink="admin" routerLinkActive="active">
-        <img src="/assets/admin.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+        <img src="/assets/user_admin.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
       </a> 
-      <form class="d-flex" (onEnter)="buscar(termino)" autocomplete="off">
-        <input class="form-control me-2" type="text" name= "termino" placeholder="Qué buscamos?" aria-label="Search">
-        <button class="btn btn-outline-light" type="text" (onClick)="buscar(termino)">Buscar</button>
-      </form>
+      <div class="d-flex" (onEnter)="buscar(termino.value)" autocomplete="off">
+        <input #termino class="form-control me-2" type="text" name= "termino" placeholder="Qué buscamos?" aria-label="Search">
+        <button class="btn btn-outline-light" type="text" (click)="buscar(termino.value)">Buscar</button>
+      </div>
     </div>
   </div>
 </nav>

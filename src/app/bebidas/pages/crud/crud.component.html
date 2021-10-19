@@ -1,7 +1,13 @@
+<br>
+<!-- botón del modal -->
+<div class="container">
+  <button class="btn btn-light" type="button">Añadir Kiosko/Local</button>
+</div> <br>
+
 <div class="container">
     <table class="table">
         <thead>
-          <tr class = "table-warning text-center">
+          <tr class = "table-dark text-center">
             <th scope="col">Nombre</th>
             <th scope="col">Avatar</th>
             <th scope="col">Descripcion</th>
@@ -10,15 +16,43 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let kiosko of kioskos" class="text-center">
+          <tr *ngFor="let kiosko of kioskos" class="table-light text-center">
             <td>{{kiosko.name}}</td>
             <td><img [src]="kiosko.avatar" [alt]="kiosko.name" class="rounded-circle" width="50px" height="50px"></td>
            
             <td>{{kiosko.descripcion}}</td>
-            <td><button type="button" class="btn btn-warning btn-sm" (click)= "guardar(kiosko.id)">Editar</button></td>
-            <td><button type="button" class="btn btn-primary btn-sm eliminar" (click)= "eliminar(kiosko.id)" >Eliminar</button></td>
+            <td><button type="button" class="btn btn-primary btn-sm"(click) = "id(kiosko.id)">Editar</button></td>
+            <td><button type="button" class="btn btn-danger btn-sm" (click) = "eliminar(kiosko.id)">Eliminar</button></td>
           </tr>
 
         </tbody>
       </table>
 </div>
+
+<form  *ngIf="formCreateKiosko" class="container p-3 my-3 bg-dark text-white" [formGroup]="formCreateKiosko">
+  <div  class="col-md-6">
+    <label class="form-label">Nombre</label>
+    <input [(ngModel)] = "kiosko.name" type="text" class="form-control" formControlName="name">
+  </div>
+  <div class="col-md-6">
+    <label for="inputAddress2" class="form-label">Descripcion</label>
+    <input [(ngModel)] = "kiosko.descripcion" type="text" class="form-control" formControlName="descripcion">
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">Avatar</label>
+    <input [(ngModel)] = "kiosko.avatar" type="text" class="form-control" formControlName="avatar">
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <br><button type="submit" class="btn btn-outline-light" id="crearKiosko" (click) = "crearKiosko()" >
+        Crear</button>
+    </div>
+    <div class="col-md-6">
+      <br><button type="submit" class="btn btn-outline-light" id="editarKiosco" (click) = "editar()" >
+        Editar</button>
+    </div>
+
+  </div>
+  
+
+</form> <br>

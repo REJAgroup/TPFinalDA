@@ -9,6 +9,7 @@ import { BebidasService } from 'src/app/bebidas/services/bebidas.service';
 })
 export class NavComponent implements OnInit {
 
+  estoyHome: boolean = false;
   termino:string = '';
   hayError: boolean = false;
   hayBusqueda: boolean = false;
@@ -23,7 +24,7 @@ export class NavComponent implements OnInit {
     this.hayError = false;
     this.hayBusqueda = true;
     this.termino = termino;
-    console.log("Buenas");
+    console.log("valor", termino);
     this.__bebidasService.buscarKiosko(termino).subscribe(resp => {
       console.log(resp);
       this.kioskos = resp;

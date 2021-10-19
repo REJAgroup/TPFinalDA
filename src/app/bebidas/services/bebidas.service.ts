@@ -13,7 +13,7 @@ export class BebidasService {
 
   private apiUrl:string = 'https://614ba83ee4cc2900179eb18b.mockapi.io/kioskos';
 
-  mostrarKioskios (): Observable <Kiosko[]>{
+  mostrarKioskos (): Observable <Kiosko[]>{
    return this.http.get<Kiosko[]> (this.apiUrl);
   }
   verKioskio (id:string): Observable <Kiosko>{
