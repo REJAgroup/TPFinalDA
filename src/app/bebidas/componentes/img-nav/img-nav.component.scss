@@ -1,3 +1,6 @@
+.row {
+  height: 500px;
+}
 .container {
     position: relative;
     width: 40%;
@@ -5,8 +8,10 @@
   }
   
   .image {
-    display: block;
-    width: 40%;
+    display:block;
+    margin:auto;
+    margin-top: 70px;
+    width: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   }
   
@@ -24,6 +29,8 @@
   
   .container:hover .overlay {
     opacity: 1;
+    background-color: #524a26bd;
+    transform: scale(1.1,1.1);
   }
   
   .text {

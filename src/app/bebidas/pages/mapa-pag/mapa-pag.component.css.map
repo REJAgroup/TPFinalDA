@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAA;EACZ,UAAU,EAAE,MAAM;EAClB,KAAK,EAAC,IAAI;EACV,MAAM,EAAE,IAAI;CACf",
+    "sources": [
+        "mapa-pag.component.scss"
+    ],
+    "names": [],
+    "file": "mapa-pag.component.css"
+}

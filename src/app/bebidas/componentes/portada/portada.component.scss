@@ -3,20 +3,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Prompt:wght@600&display=swap');
 
 .container-main {
-    background-image: url(assets/portadaSatur.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    height: 55%;
+    height: 80%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: url(../../../../assets/portadaSatur.jpg);
+    background-size: 120% 120%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: move 10s infinite linear alternate;
+    position: relative;
+    border-bottom: #595959 5px solid;
+}
+
+@keyframes move {
+    from{
+        background-position: bottom left;
+    }to{
+        background-position: top right;
+    }
+}
 
 .row{
     color: white;
@@ -35,7 +47,7 @@
     color:#000000;
     }
     to {
-    color:#d8db03;
+    color:#c4c702cc;
     }
 } 
 
