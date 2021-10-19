@@ -1,13 +1,12 @@
 
-<div class="container">
+
+<div class="container BGcontKioskos">
+    <h1 class="display-5">Kioskos disponibles</h1>
     <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div id="contenedorKios" *ngFor = "let kiosko of kioskos" >
+        <div class="paddings-12" id="contenedorKios" *ngFor = "let kiosko of kioskos" >
             <app-tabla-kios [kiosko] = kiosko></app-tabla-kios>
         </div>
     </div>
 </div>
 
-<div class="full-width">
-    <app-footer></app-footer>
-</div>
 

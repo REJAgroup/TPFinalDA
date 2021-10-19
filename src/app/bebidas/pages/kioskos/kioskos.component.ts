@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavComponent } from 'src/app/shared/nav/nav.component';
 import { Kiosko } from '../../interfaces/kiosko.inteface';
 import { BebidasService } from '../../services/bebidas.service';
 
@@ -18,5 +19,7 @@ export class KioskosComponent implements OnInit {
     this.kioskos=kioskos
     });
   }
+
+
 
 }

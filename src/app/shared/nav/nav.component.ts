@@ -9,7 +9,7 @@ import { BebidasService } from 'src/app/bebidas/services/bebidas.service';
 })
 export class NavComponent implements OnInit {
 
-  estoyHome: boolean = false;
+  estoyHome: boolean = true;
   termino:string = '';
   hayError: boolean = false;
   hayBusqueda: boolean = false;
@@ -33,6 +33,10 @@ export class NavComponent implements OnInit {
       this.hayError = true;
       this.kioskos = [];
     })
+  }
+
+  mostrarItems(){
+    this.estoyHome = true;
   }
 
 }

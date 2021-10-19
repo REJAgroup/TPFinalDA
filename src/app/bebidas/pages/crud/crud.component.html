@@ -1,9 +1,4 @@
 <br>
-<!-- botón del modal -->
-<div class="container">
-  <button class="btn btn-light" type="button">Añadir Kiosko/Local</button>
-</div> <br>
-
 <div class="container">
     <table class="table">
         <thead>
@@ -29,29 +24,26 @@
       </table>
 </div>
 
-<form  *ngIf="formCreateKiosko" class="container p-3 my-3 bg-dark text-white" [formGroup]="formCreateKiosko">
-  <div  class="col-md-6">
+<form  *ngIf="formCreateKiosko" class="container p-3 my-3 bg-dark text-white text-center" [formGroup]="formCreateKiosko">
+  <div  class="col-12">
     <label class="form-label">Nombre</label>
     <input [(ngModel)] = "kiosko.name" type="text" class="form-control" formControlName="name">
   </div>
-  <div class="col-md-6">
+  <div class="col-12">
     <label for="inputAddress2" class="form-label">Descripcion</label>
     <input [(ngModel)] = "kiosko.descripcion" type="text" class="form-control" formControlName="descripcion">
   </div>
-  <div class="col-md-6">
+  <div class="col-12">
     <label for="inputCity" class="form-label">Avatar</label>
     <input [(ngModel)] = "kiosko.avatar" type="text" class="form-control" formControlName="avatar">
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-12">
       <br><button type="submit" class="btn btn-outline-light" id="crearKiosko" (click) = "crearKiosko()" >
         Crear</button>
-    </div>
-    <div class="col-md-6">
-      <br><button type="submit" class="btn btn-outline-light" id="editarKiosco" (click) = "editar()" >
+      <button type="submit" class="btn btn-outline-light" id="editarKiosco" (click) = "editar()" >
         Editar</button>
     </div>
-
   </div>
   
 
