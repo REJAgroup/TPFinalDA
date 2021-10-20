@@ -14,19 +14,18 @@ export class ComentariosComponent implements OnInit {
   verComentario! : Comentario | undefined ;
   comentario : Comentario[] = [] ;
 
-  constructor(private __bebidasService : BebidasService,private verComment: ActivatedRoute) { }
+  constructor(private __bebidasService : BebidasService,private comentarios : ActivatedRoute) { }
 
   ngOnInit(): void {
 
-    this.verComment.params.pipe(switchMap(({id}) => 
+    this.comentarios.params.pipe(switchMap(({id}) => 
     this.__bebidasService.verComment(id))).subscribe(respID => {
     this.verComentario = respID;
-    console.log(respID); 
-    this.__bebidasService.mostrarComment();
+    console.log(respID);
     })
 
   }
-
+  
   
 
 }
