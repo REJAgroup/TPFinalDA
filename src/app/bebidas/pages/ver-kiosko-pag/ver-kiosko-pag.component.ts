@@ -3,6 +3,7 @@ import { Kiosko } from '../../interfaces/kiosko.inteface';
 import { BebidasService } from '../../services/bebidas.service';
 import { switchMap } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
+import { Comentario } from '../../interfaces/comentario.inteface';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 export class VerKioskoPagComponent implements OnInit {
 
     verKioskos! : Kiosko;
-
+    comentarios : Comentario[] = [] ;
 
   constructor(private __bebidasService : BebidasService, private kiosko : ActivatedRoute) { }
 
@@ -21,12 +22,19 @@ export class VerKioskoPagComponent implements OnInit {
   
     this.kiosko.params.pipe(switchMap(({id}) => 
     this.__bebidasService.verKioskio(id))).subscribe(respID => {
-      this.verKioskos = respID; 
+    this.verKioskos = respID; 
     })
     
+    this.__bebidasService.mostrarComment().subscribe(comen => {
+    this.comentarios=comen
+      });
 
   }
 
+  show(){
+    console.log(this.comentarios);
+  }
+  
 
 
 }
