@@ -1,5 +1,6 @@
 .row {
 height: 500px;
+width: 100%;
 }
 .container {
   position: relative;
@@ -56,7 +57,7 @@ height: 500px;
   letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
-  animation: move linear 2000ms infinite;
+  animation: movea linear 2000ms infinite;
   z-index: 2
 }
 
@@ -65,7 +66,7 @@ height: 500px;
 }
 
 /*Animación para rotar las sombras*/
-@keyframes move {
+@keyframes movea {
   0% {
     text-shadow:
       4px -4px 0 #da0641,
