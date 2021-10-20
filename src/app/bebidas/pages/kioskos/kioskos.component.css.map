@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,cAAc,CAAA;EACV,gBAAgB,EAAE,SAAS;EAC3B,aAAa,EAAE,IAAI;EACnB,aAAa,EAAE,IAAI;EACnB,YAAY,EAAE,IAAI;EAClB,WAAW,EAAE,IAAI;EACjB,cAAc,EAAE,IAAI;EACpB,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,IAAI;CACtB;;AACD,AAAA,YAAY,CAAA;EACR,WAAW,EAAE,IAAI;EACjB,cAAc,EAAE,IAAI;CACvB;;AACD,AAAA,UAAU,CAAA;EACN,KAAK,EAAE,KAAK;CACf;;AACD,AAAA,oBAAoB,CAAA;EAChB,MAAM,EAAE,MAAM;CACjB",
-    "sources": [
-        "kioskos.component.scss"
-    ],
-    "names": [],
-    "file": "kioskos.component.css"
-}

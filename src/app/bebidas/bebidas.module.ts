@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { PortadaComponent } from './componentes/portada/portada.component';
-import { InfoComponent } from './componentes/info/info.component';
 import { MapaComponent } from './componentes/mapa/mapa.component';
 import { TablaKiosComponent } from './componentes/tabla-kios/tabla-kios.component';
 import { CardComponent } from './componentes/card/card.component';
@@ -23,7 +22,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     HomeComponent,
     PortadaComponent,
-    InfoComponent,
     MapaComponent,
     TablaKiosComponent,
     CardComponent,
@@ -45,7 +43,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   exports: [
     HomeComponent,
     PortadaComponent,
-    InfoComponent,
     MapaComponent,
     TablaKiosComponent,
     CardComponent,
