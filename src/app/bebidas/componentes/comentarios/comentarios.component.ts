@@ -34,7 +34,7 @@ export class ComentariosComponent implements OnInit {
   }
 
   mostrar(){this.__bebidasService.mostrarComment().subscribe(comentario=>{
-    this.comentario = comentario;
+   // this.comentario = comentario;
     console.log(comentario);
   })
   }
