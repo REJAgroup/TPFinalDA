@@ -3,7 +3,7 @@ import { Kiosko } from '../../interfaces/kiosko.inteface';
 import { BebidasService } from '../../services/bebidas.service';
 import { switchMap } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
-import { Comentario } from '../../interfaces/comentario.inteface';
+
 
 @Component({
   selector: 'app-ver-kiosko-pag',
@@ -13,7 +13,7 @@ import { Comentario } from '../../interfaces/comentario.inteface';
 export class VerKioskoPagComponent implements OnInit {
 
     verKioskos! : Kiosko;
-    comentarios : Comentario[] = [] ;
+
 
   constructor(private __bebidasService : BebidasService, private kiosko : ActivatedRoute) { }
 

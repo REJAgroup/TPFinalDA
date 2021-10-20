@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { subscribeOn } from 'rxjs/operators';
 import { Kiosko } from '../../interfaces/kiosko.inteface';
 import { BebidasService } from '../../services/bebidas.service';
 
@@ -11,10 +10,8 @@ import { BebidasService } from '../../services/bebidas.service';
 })
 export class CrudComponent implements OnInit {
    
-  
-  
   kioskos : Kiosko [] = [];
-   formCreateKiosko : FormGroup | undefined = undefined;
+  formCreateKiosko : FormGroup | undefined = undefined;
 
    kiosko:Kiosko = {
      id : '',
@@ -70,10 +67,6 @@ export class CrudComponent implements OnInit {
       this.__bebidasService.verKioskio(id).subscribe(kiosko => {
         this.kiosko = kiosko;
         });
-      
-      
-
-      
     }
 
 }

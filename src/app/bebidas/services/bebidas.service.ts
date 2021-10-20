@@ -46,6 +46,8 @@ export class BebidasService {
   mostrarComment(): Observable <Comentario[]>{
     return this.http.get<Comentario[]> (this.apiComentariosUrl);
   }
-
+  verComment (id:string): Observable <Comentario>{
+    return this.http.get<Comentario> (`${this.apiComentariosUrl}/${id}`);
+    }
 
 }
