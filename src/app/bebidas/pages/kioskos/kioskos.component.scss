@@ -1,5 +1,5 @@
 .BGcontKioskos{
-    background-color: #000000d9;
+    background-color: #212529;
     border-radius: 30px;
     padding-right: 15px;
     padding-left: 15px;
@@ -13,8 +13,23 @@
     padding-bottom: 12px;
 }
 .display-5{
-    color: white;
+    padding: 10px 20px;
+    background: none;
+    border-style: none;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    margin-top: 20px;
+    transition: background 300ms;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
 }
+
+.display-5:hover{
+    background: #ffffff;
+    color: #000000;
+}
+
 .display-line-height{
     height: 0.1rem;
 }

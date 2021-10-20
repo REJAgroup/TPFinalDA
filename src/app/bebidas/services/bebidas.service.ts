@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Comentario } from '../interfaces/comentario.inteface';
 import {Kiosko} from '../interfaces/kiosko.inteface';
 
 @Injectable({
@@ -11,30 +12,42 @@ export class BebidasService {
 
   constructor(private http: HttpClient) { };
 
-  private apiUrl:string = 'https://614ba83ee4cc2900179eb18b.mockapi.io/kioskos';
+  private apiKioskosUrl:string = 'https://614ba83ee4cc2900179eb18b.mockapi.io/kioskos';
+  private apiComentariosUrl : string = 'https://614ba83ee4cc2900179eb18b.mockapi.io/comentarios';
 
+
+  //  KIOSKOS
   mostrarKioskos (): Observable <Kiosko[]>{
-   return this.http.get<Kiosko[]> (this.apiUrl);
+   return this.http.get<Kiosko[]> (this.apiKioskosUrl);
   }
   verKioskio (id:string): Observable <Kiosko>{
-  return this.http.get<Kiosko> (`${this.apiUrl}/${id}`);
+  return this.http.get<Kiosko> (`${this.apiKioskosUrl}/${id}`);
   }
 
   buscarKiosko(termino: string): Observable<Kiosko[]> {
-  const url = `${this.apiUrl}/name/${termino}`;
+  const url = `${this.apiKioskosUrl}/name/${termino}`;
   return this.http.get<Kiosko[]>(url);
   }
 
   agregarKiosko(kiosko:Kiosko): Observable<Kiosko>{
-    return this.http.post<Kiosko>(`${this.apiUrl}`, kiosko);
+    return this.http.post<Kiosko>(`${this.apiKioskosUrl}`, kiosko);
   }
 
   editarKiosko(kiosko:Kiosko): Observable<Kiosko>{
-    return this.http.put<Kiosko>(`${this.apiUrl}/${kiosko.id}`, kiosko);
+    return this.http.put<Kiosko>(`${this.apiKioskosUrl}/${kiosko.id}`, kiosko);
   }
   
   eliminarKiosko(id:string|undefined): Observable<any>{
-    return this.http.delete<any>(`${this.apiUrl}/${id}`);
-
+    return this.http.delete<any>(`${this.apiKioskosUrl}/${id}`);
   }
+
+  // COMENTARIOS
+
+  mostrarComment(): Observable <Comentario[]>{
+    return this.http.get<Comentario[]> (this.apiComentariosUrl);
+  }
+  verComment (id:string): Observable <Comentario>{
+    return this.http.get<Comentario> (`${this.apiComentariosUrl}/${id}`);
+    }
+
 }

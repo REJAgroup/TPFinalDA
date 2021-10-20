@@ -1,14 +1,41 @@
 <link href="../comentarios/comentarios.component.scss" rel="stylesheet">
+<link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" integrity="sha384-jbCTJB16Q17718YM9U22iJkhuGbS0Gd2LjaWb4YJEZToOPmnKDjySV">
 <script href="../comentarios/comentarios.component.ts" type="text/javascript"></script>
-<body>
-    <h2>Preguntale al vendedor</h2> <!-- {{ pregunta }} -->
-<textarea id="pregunta" name="pregunta" rows="2" cols="50" placeholder="Escribe tu pregunta..." maxlength="300"></textarea><button><strong>Preguntar</strong></button>
-<br><br><h2>Comentarios</h2>
-<ul>
-    <li><textarea id="comentarios" name="comentarios" rows="10" cols="50" placeholder="Escribe algún comentario..." maxlength="300"></textarea></li>
-    <li id="enviar"><input type="submit"></li>
-</ul>
 
-</body>
+<!-- Comentarios -->
 
-<!-- (click)="enviarPregunta()" -->
+<div class="bg-white rounded shadow-sm p-4 mb-4 restaurant-detailed-ratings-and-reviews">
+    <h4 class="mb-1">Reviews</h4>
+    <div class="reviews-members pt-4 pb-4">
+        <div class="media">
+            <div class="media-body">
+                <div class="reviews-members-header text-black">
+                    sasaasa
+                </div>
+                <div class="reviews-members-body">
+                    <p>asasasasasa</p>
+                </div>
+                <p>/100</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row bg-white">
+    <!-- Ingreso Comentarios -->
+    <form class="container p-3 my-3 divForm" >
+        <h4>Cuéntanos tu experiencia</h4>
+        <div  class="col-12">
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+            <br><button type="submit" class="btn btn-outline-light" id="crearKiosko"  >
+                Enviar</button>
+            </div>
+        </div>
+    </form> 
+</div>
+
+

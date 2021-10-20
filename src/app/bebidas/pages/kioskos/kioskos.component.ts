@@ -12,6 +12,7 @@ export class KioskosComponent implements OnInit {
 
   kioskos : Kiosko[] = [];  
 
+
   constructor(private __bebidasService : BebidasService) { }
 
   ngOnInit(): void {

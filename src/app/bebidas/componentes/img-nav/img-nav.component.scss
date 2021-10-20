@@ -1,46 +1,130 @@
 .row {
-  height: 500px;
+height: 500px;
+width: 100%;
 }
 .container {
-    position: relative;
-    width: 40%;
-    
-  }
+  position: relative;
+  width: 40%;
   
-  .image {
-    display:block;
-    margin:auto;
-    margin-top: 70px;
-    width: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.image {
+  display:block;
+  margin:auto;
+  margin-top: 70px;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.capa-gradient{
+  width: 100%;
+  height: 940px;
+  background: -webkit-linear-gradient(left,#000000,#e5ff00);
+  opacity: 0.1;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #524a26bd;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+  background-color: #524a26bd;
+  transform: scale(1.1,1.1);
+  border-radius: 30px;
+}
+
+.text {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font: normal 30px Varela Round, sans-serif;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  animation: movea linear 2000ms infinite;
+  z-index: 2
+}
+
+.bg-5{
+    background: linear-gradient(135deg, rgb(227, 227, 227) 0%, rgb(93, 104, 116) 100%);
+}
+
+/*Animación para rotar las sombras*/
+@keyframes movea {
+  0% {
+    text-shadow:
+      4px -4px 0 #da0641,
+      3px -3px 0 #da0641,
+      2px -2px 0 #da0641,
+      1px -1px 0 #da0641,
+      -4px 4px 0 #13f1fc,
+      -3px 3px 0 #13f1fc,
+      -2px 2px 0 #13f1fc,
+      -1px 1px 0 #13f1fc
+    ;
   }
-  
-  .overlay {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #524a26bd;
+  25% {
+    text-shadow:
+      -4px -4px 0 #13f1fc,
+      -3px -3px 0 #13f1fc,
+      -2px -2px 0 #13f1fc,
+      -1px -1px 0 #13f1fc,
+      4px 4px 0 #da0641,
+      3px 3px 0 #da0641,
+      2px 2px 0 #da0641,
+      1px 1px 0 #da0641
+    ;
   }
-  
-  .container:hover .overlay {
-    opacity: 1;
-    background-color: #524a26bd;
-    transform: scale(1.1,1.1);
+  50% {
+    text-shadow:
+      -4px 4px 0 #da0641,
+      -3px 3px 0 #da0641,
+      -2px 2px 0 #da0641,
+      -1px 1px 0 #da0641,
+      4px -4px 0 #13f1fc,
+      3px -3px 0 #13f1fc,
+      2px -2px 0 #13f1fc,
+      1px -1px 0 #13f1fc
+    ;
   }
-  
-  .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
+  75% {
+    text-shadow:
+      4px 4px 0 #13f1fc,
+      3px 3px 0 #13f1fc,
+      2px 2px 0 #13f1fc,
+      1px 1px 0 #13f1fc,
+      -4px -4px 0 #da0641,
+      -3px -3px 0 #da0641,
+      -2px -2px 0 #da0641,
+      -1px -1px 0 #da0641
+    ;
   }
+  100% {
+    text-shadow:
+      4px -4px 0 #da0641,
+      3px -3px 0 #da0641,
+      2px -2px 0 #da0641,
+      1px -1px 0 #da0641,
+      -4px 4px 0 #13f1fc,
+      -3px 3px 0 #13f1fc,
+      -2px 2px 0 #13f1fc,
+      -1px 1px 0 #13f1fc
+    ;
+  }
+}

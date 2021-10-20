@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,EAAE,CAAA;EACE,KAAK,EAAG,KAAK;CAChB;;AACD,AAAA,EAAE,CAAA;EACE,KAAK,EAAG,KAAK;CAChB;;AACD,AAAA,GAAG,CAAA;EACC,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,IAAI;CACf",
-    "sources": [
-        "ver-kiosko-pag.component.scss"
-    ],
-    "names": [],
-    "file": "ver-kiosko-pag.component.css"
-}
