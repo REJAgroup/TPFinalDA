@@ -1,11 +1,29 @@
-<div class="row">
+<div class="container">
     <div class="container ">
         <h1>{{verKioskos.name}}</h1>
         <h2>{{verKioskos.descripcion}}</h2> 
         <img src="{{verKioskos.avatar}}" alt="">
     </div>
-    <div class="container espacios bg">
-        <app-comentarios></app-comentarios>
+    <h1 (click)="show()">DALE VIEJA</h1>
+    <h4 class="mb-1">Reviews</h4>
+    <div class="container espacios bg" *ngFor = "let comentario of comentarios" >
+        <app-comentarios [comentario] = comentario></app-comentarios>
+    </div>
+      <!-- Ingreso Comentarios -->
+    <div class="row bg-white">
+        <form class="container p-3 my-3 divForm" >
+            <h4>Cuéntanos tu experiencia</h4>
+            <div  class="col-12">
+                <input type="text" class="form-control" >
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <br><button type="submit" class="btn btn-outline-light" id="crearKiosko"  >
+                    Enviar</button>
+                </div>
+            </div>
+        </form> 
     </div>
 </div>
 

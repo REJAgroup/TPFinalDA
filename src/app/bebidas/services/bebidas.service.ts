@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Comentario } from '../interfaces/comentario.inteface';
-import {Kiosko} from '../interfaces/kiosko.inteface';
+import { Kiosko } from '../interfaces/kiosko.inteface';
 
 @Injectable({
   providedIn: 'root'
@@ -46,8 +46,8 @@ export class BebidasService {
   mostrarComment(): Observable <Comentario[]>{
     return this.http.get<Comentario[]> (this.apiComentariosUrl);
   }
-  verComment (id:string): Observable <Comentario>{
-    return this.http.get<Comentario> (`${this.apiComentariosUrl}/${id}`);
-    }
-
+    
+  agregarComentario(comentario:Comentario): Observable<Comentario>{
+    return this.http.post<Comentario>(`${this.apiComentariosUrl}`, comentario);
+  }
 }

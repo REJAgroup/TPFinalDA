@@ -1,5 +1,5 @@
 export interface Comentario {
     comentario:  string;
-    calificación: number;
+    calificacion: string;
     id: string;
 }

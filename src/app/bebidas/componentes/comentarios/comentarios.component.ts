@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { Component, Input, OnInit } from '@angular/core';
 import { Comentario } from '../../interfaces/comentario.inteface';
 import { BebidasService } from '../../services/bebidas.service';
+
 @Component({
   selector: 'app-comentarios',
   templateUrl: './comentarios.component.html',
@@ -11,22 +10,33 @@ import { BebidasService } from '../../services/bebidas.service';
 
 export class ComentariosComponent implements OnInit {
   
-  verComentario! : Comentario | undefined ;
-  comentario : Comentario[] = [] ;
+  @Input() comentario : Comentario[] = [] ;
+  
+  comment :  Comentario = {
+    comentario: '',
+    calificacion: '',
+    id : '',
+  }
+  
 
-  constructor(private __bebidasService : BebidasService,private verComment: ActivatedRoute) { }
+  constructor(private __bebidasService : BebidasService) { }
 
   ngOnInit(): void {
-
-    this.verComment.params.pipe(switchMap(({id}) => 
-    this.__bebidasService.verComment(id))).subscribe(respID => {
-    this.verComentario = respID;
-    console.log(respID); 
-    this.__bebidasService.mostrarComment();
-    })
-
+    this.mostrar();
   }
 
+  crearComentario(){
+    this.__bebidasService.agregarComentario(this.comment).subscribe(creacoment =>{
+      this.mostrar();
+      console.log(creacoment);
+      })
   
+  }
+
+  mostrar(){this.__bebidasService.mostrarComment().subscribe(comentario=>{
+    this.comentario = comentario;
+    console.log(comentario);
+  })
+  }
 
 }
