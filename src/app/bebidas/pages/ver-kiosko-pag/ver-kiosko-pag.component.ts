@@ -16,6 +16,12 @@ export class VerKioskoPagComponent implements OnInit {
     verKioskos! : Kiosko;
     comentarios : Comentario[] = [] ;
 
+    comment :  Comentario = {
+      comentario: '',
+      calificacion: '',
+      id : '',
+    }
+
   constructor(private __bebidasService : BebidasService, private kiosko : ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -35,6 +41,18 @@ export class VerKioskoPagComponent implements OnInit {
     console.log(this.comentarios);
   }
   
-
+  crearComentario(){
+    this.__bebidasService.agregarComentario(this.comment).subscribe(creacoment =>{
+      this.mostrar();
+      console.log(creacoment);
+      })
+  
+  }
+  
+  mostrar(){this.__bebidasService.mostrarComment().subscribe(comentario=>{
+    // this.comentario = comentario;
+     console.log(comentario);
+   })
+   }
 
 }
