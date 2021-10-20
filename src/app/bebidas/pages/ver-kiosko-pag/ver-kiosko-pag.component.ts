@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Kiosko } from '../../interfaces/kiosko.inteface';
 import { BebidasService } from '../../services/bebidas.service';
 import { switchMap } from 'rxjs/operators';
@@ -23,7 +23,7 @@ export class VerKioskoPagComponent implements OnInit {
     this.kiosko.params.pipe(switchMap(({id}) => 
     this.__bebidasService.verKioskio(id))).subscribe(respID => {
     this.verKioskos = respID; 
-    })
+    });
     
     this.__bebidasService.mostrarComment().subscribe(comen => {
     this.comentarios=comen
