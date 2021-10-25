@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Kiosko } from '../../interfaces/kiosko.inteface';
 
 @Component({
-  selector: 'app-tabla-kios',
-  templateUrl: './tabla-kios.component.html',
-  styleUrls: ['./tabla-kios.component.scss']
+  selector: 'app-card-kios',
+  templateUrl: './card-kios.component.html',
+  styleUrls: ['./card-kios.component.scss']
 })
-export class TablaKiosComponent implements OnInit {
+export class CardKiosComponent implements OnInit {
 
   @Input () kiosko : Kiosko | undefined ;
   
@@ -16,4 +16,5 @@ export class TablaKiosComponent implements OnInit {
 
   }
 
+  
 }

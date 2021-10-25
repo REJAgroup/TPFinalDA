@@ -8,7 +8,7 @@ import { Kiosko } from '../interfaces/kiosko.inteface';
   providedIn: 'root'
 })
 
-export class BebidasService {
+export class KioskosService {
 
   constructor(private http: HttpClient) { };
 
@@ -41,13 +41,4 @@ export class BebidasService {
     return this.http.delete<any>(`${this.apiKioskosUrl}/${id}`);
   }
 
-  // COMENTARIOS
-
-  mostrarComment(): Observable <Comentario[]>{
-    return this.http.get<Comentario[]> (this.apiComentariosUrl);
-  }
-    
-  agregarComentario(comentario:Comentario): Observable<Comentario>{
-    return this.http.post<Comentario>(`${this.apiComentariosUrl}`, comentario);
-  }
 }

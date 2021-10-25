@@ -5,16 +5,12 @@ import { ErrorPagComponent } from "./shared/error-pag/error-pag.component";
 
 const routes: Routes = [
     {
-      path: "",
-      component: HomeComponent,
-    },
-    {
       path: "auth",
       loadChildren: () => import('./auth/auth.module'). then (m => m.AuthModule)
     },
     {
       path: "kioskos",
-      loadChildren: () => import('./bebidas/bebidas.module'). then (m => m.BebidasModule)
+      loadChildren: () => import('./bebidas/kioskos.module'). then (m => m.KioskosModule)
     },
     {
       path: "404",

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Kiosko } from '../../interfaces/kiosko.inteface';
-import { BebidasService } from '../../services/bebidas.service';
+import { KioskosService } from '../../services/kioskos.service';
 
 @Component({
   selector: 'app-crud',
@@ -20,7 +20,7 @@ export class CrudComponent implements OnInit {
      descripcion: ''
    }
 
-  constructor(private __bebidasService : BebidasService, private formBuilder : FormBuilder) { }
+  constructor(private __kioskosService : KioskosService, private formBuilder : FormBuilder) { }
   
   ngOnInit(): void {
     this.mostrar();
@@ -34,21 +34,21 @@ export class CrudComponent implements OnInit {
   }
 
 
-  mostrar(){this.__bebidasService.mostrarKioskos().subscribe(kiosko=>{
+  mostrar(){this.__kioskosService.mostrarKioskos().subscribe(kiosko=>{
     this.kioskos = kiosko;
 
   })
   }
 
    editar(){
-       this.__bebidasService.editarKiosko(this.kiosko).subscribe(kiosko => {
+       this.__kioskosService.editarKiosko(this.kiosko).subscribe(kiosko => {
        this.mostrar();
        })
      }  
   
 
     eliminar(id:string){
-      this.__bebidasService.eliminarKiosko(id!).subscribe(kiosko => {
+      this.__kioskosService.eliminarKiosko(id!).subscribe(kiosko => {
       this.mostrar();
      })
     }
@@ -57,14 +57,14 @@ export class CrudComponent implements OnInit {
     crearKiosko(){
       //let kioskosss = this.formCreateKiosko?.value;
      //console.log(kioskosss);
-      this.__bebidasService.agregarKiosko(this.kiosko).subscribe(kiosko =>{
+      this.__kioskosService.agregarKiosko(this.kiosko).subscribe(kiosko =>{
       this.mostrar();
       console.log(kiosko);
       })
     }
 
     id(id:string){
-      this.__bebidasService.verKioskio(id).subscribe(kiosko => {
+      this.__kioskosService.verKioskio(id).subscribe(kiosko => {
         this.kiosko = kiosko;
         });
     }

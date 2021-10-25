@@ -1,10 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Kiosko } from '../../interfaces/kiosko.inteface';
-import { BebidasService } from '../../services/bebidas.service';
+import { KioskosService } from '../../services/kioskos.service';
 import { switchMap } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
 import { Comentario } from '../../interfaces/comentario.inteface';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { ComentariosService } from '../../services/comentarios.service';
 
 
 @Component({
@@ -24,16 +25,16 @@ export class VerKioskoPagComponent implements OnInit {
       id : '',
     }
 
-  constructor(private __bebidasService : BebidasService, private kiosko : ActivatedRoute, private formBuilder : FormBuilder) { }
+  constructor(private __kioskosService : KioskosService,private __commentService : ComentariosService, private kiosko : ActivatedRoute, private formBuilder : FormBuilder) { }
 
   ngOnInit(): void {
   
     this.kiosko.params.pipe(switchMap(({id}) => 
-    this.__bebidasService.verKioskio(id))).subscribe(respID => {
+    this.__kioskosService.verKioskio(id))).subscribe(respID => {
     this.verKioskos = respID; 
     });
     
-    this.__bebidasService.mostrarComment().subscribe(comen => {
+    this.__commentService.mostrarComment().subscribe(comen => {
     this.comentarios=comen
       });
       
@@ -51,14 +52,14 @@ export class VerKioskoPagComponent implements OnInit {
   }
   
   crearComentario(){
-    this.__bebidasService.agregarComentario(this.comment).subscribe(creacoment =>{
+    this.__commentService.agregarComentario(this.comment).subscribe(creacoment =>{
       this.mostrar();
       console.log(creacoment);
       })
   
   }
   
-  mostrar(){this.__bebidasService.mostrarComment().subscribe(comentario=>{
+  mostrar(){this.__commentService.mostrarComment().subscribe(comentario=>{
     // this.comentario = comentario;
      console.log(comentario);
    })

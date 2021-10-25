@@ -4,8 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { PortadaComponent } from './componentes/portada/portada.component';
 import { MapaComponent } from './componentes/mapa/mapa.component';
-import { TablaKiosComponent } from './componentes/tabla-kios/tabla-kios.component';
-import { CardComponent } from './componentes/card/card.component';
+import { CardKiosComponent } from './componentes/card-kios/card-kios.component';
 import { KioskosComponent } from './pages/kioskos/kioskos.component';
 import { MapaPagComponent } from './pages/mapa-pag/mapa-pag.component';
 import { SharedModule } from '../shared/shared.module';
@@ -14,8 +13,7 @@ import { CrudComponent } from './pages/crud/crud.component';
 import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
 import { ImgNavComponent } from './componentes/img-nav/img-nav.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BebidasRoutingModule } from './bebidas-routing.module';
-
+import { KioskosRoutingModule } from './kioskos-routing.module';
 
 
 @NgModule({
@@ -23,8 +21,7 @@ import { BebidasRoutingModule } from './bebidas-routing.module';
     HomeComponent,
     PortadaComponent,
     MapaComponent,
-    TablaKiosComponent,
-    CardComponent,
+    CardKiosComponent,
     KioskosComponent,
     MapaPagComponent,
     VerKioskoPagComponent,
@@ -38,14 +35,13 @@ import { BebidasRoutingModule } from './bebidas-routing.module';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    BebidasRoutingModule
+    KioskosRoutingModule
   ],
   exports: [
     HomeComponent,
     PortadaComponent,
     MapaComponent,
-    TablaKiosComponent,
-    CardComponent,
+    CardKiosComponent,
     KioskosComponent,
     MapaPagComponent,
     VerKioskoPagComponent,
@@ -54,4 +50,4 @@ import { BebidasRoutingModule } from './bebidas-routing.module';
     ImgNavComponent
   ]
 })
-export class BebidasModule { }
+export class KioskosModule { }

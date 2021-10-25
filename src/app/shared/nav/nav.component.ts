@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Kiosko } from 'src/app/bebidas/interfaces/kiosko.inteface';
-import { BebidasService } from 'src/app/bebidas/services/bebidas.service';
+import { KioskosService } from 'src/app/bebidas/services/kioskos.service';
 
 @Component({
   selector: 'app-nav',
@@ -15,7 +15,7 @@ export class NavComponent implements OnInit {
   hayBusqueda: boolean = false;
   kioskos : Kiosko[] = [];  
 
-  constructor(private __bebidasService : BebidasService) { }
+  constructor(private __kioskosService : KioskosService) { }
 
   ngOnInit(): void {
   }
@@ -25,7 +25,7 @@ export class NavComponent implements OnInit {
     this.hayBusqueda = true;
     this.termino = termino;
     console.log("valor", termino);
-    this.__bebidasService.buscarKiosko(termino).subscribe(resp => {
+    this.__kioskosService.buscarKiosko(termino).subscribe(resp => {
       console.log(resp);
       this.kioskos = resp;
     }, error => {

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Comentario } from '../../interfaces/comentario.inteface';
-import { BebidasService } from '../../services/bebidas.service';
+import { ComentariosService } from '../../services/comentarios.service';
+
 
 @Component({
   selector: 'app-comentarios',
@@ -19,21 +20,21 @@ export class ComentariosComponent implements OnInit {
   }
   
 
-  constructor(private __bebidasService : BebidasService) { }
+  constructor(private __commentService : ComentariosService) { }
 
   ngOnInit(): void {
     this.mostrar();
   }
 
   crearComentario(){
-    this.__bebidasService.agregarComentario(this.comment).subscribe(creacoment =>{
+    this.__commentService.agregarComentario(this.comment).subscribe(creacoment =>{
       this.mostrar();
       console.log(creacoment);
       })
   
   }
 
-  mostrar(){this.__bebidasService.mostrarComment().subscribe(comentario=>{
+  mostrar(){this.__commentService.mostrarComment().subscribe(comentario=>{
    // this.comentario = comentario;
     console.log(comentario);
   })
