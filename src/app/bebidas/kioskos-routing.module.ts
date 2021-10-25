@@ -6,6 +6,7 @@ import { MapaPagComponent } from './pages/mapa-pag/mapa-pag.component';
 import { VerKioskoPagComponent } from './pages/ver-kiosko-pag/ver-kiosko-pag.component';
 import { CrudComponent } from './pages/crud/crud.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HomeInicioComponent } from './pages/home-inicio/home-inicio.component';
 
 
 const routes : Routes = [
@@ -14,11 +15,15 @@ const routes : Routes = [
     component: HomeComponent, 
     children:[
       {
-        path: "kioskos",
+        path: "inicio",
+        component: HomeInicioComponent,
+      },
+      {
+        path: "kioscos",
         component: KioskosComponent,
       },
       {
-        path: "mapaPag",
+        path: "mapa",
         component: MapaPagComponent,
       },
       {

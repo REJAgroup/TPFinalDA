@@ -1,6 +1,6 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
-import { HomeComponent } from "./bebidas/pages/home/home.component";
+import { HomeInicioComponent } from "./bebidas/pages/home-inicio/home-inicio.component";
 import { ErrorPagComponent } from "./shared/error-pag/error-pag.component";
 
 const routes: Routes = [
@@ -13,12 +13,12 @@ const routes: Routes = [
       loadChildren: () => import('./bebidas/kioskos.module'). then (m => m.KioskosModule)
     },
     {
-      path: "404",
-      component: ErrorPagComponent,
+      path: "inicio",
+      component: HomeInicioComponent,
     },
     {
       path: '**',
-      redirectTo: '404',
+      redirectTo: 'inicio',
     }  
 ]
 

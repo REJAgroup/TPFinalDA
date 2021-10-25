@@ -6,16 +6,16 @@
     <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           
-          <a *ngIf="estoyHome" routerLink="/kioskos/kioskos" routerLinkActive="active" class="nav-link" aria-current="page">
+          <a *ngIf="estoyHome" routerLink="/kioskos/kioscos" routerLinkActive="active" class="nav-link" aria-current="page">
               Kioskos
           </a>
 
-          <a *ngIf="estoyHome" routerLink="/kioskos/mapaPag" routerLinkActive="active" class="nav-link" aria-current="page">
+          <a *ngIf="estoyHome" routerLink="/kioskos/mapa" routerLinkActive="active" class="nav-link" aria-current="page">
               Mapa
           </a>   
         </ul>
         <div class="d-flex">
-          <button class="btn btn-outline-light" type="text" routerLink="/auth/login">Entrar</button>
+          <button class="btn btn-outline-light mg-r-20" type="text" routerLink="/auth/login">Entrar</button>
         </div>  
       <a class="navbar-brand remove-bg" routerLink="/kioskos/admin" routerLinkActive="active">
         <img src="/assets/user_admin.png" alt="" width="30" height="30" class="d-inline-block align-text-top">

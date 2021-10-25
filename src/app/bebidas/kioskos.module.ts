@@ -14,6 +14,7 @@ import { ComentariosComponent } from './componentes/comentarios/comentarios.comp
 import { ImgNavComponent } from './componentes/img-nav/img-nav.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { KioskosRoutingModule } from './kioskos-routing.module';
+import { HomeInicioComponent } from './pages/home-inicio/home-inicio.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { KioskosRoutingModule } from './kioskos-routing.module';
     VerKioskoPagComponent,
     CrudComponent,
     ComentariosComponent,
-    ImgNavComponent
+    ImgNavComponent,
+    HomeInicioComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +49,8 @@ import { KioskosRoutingModule } from './kioskos-routing.module';
     VerKioskoPagComponent,
     CrudComponent,
     ComentariosComponent,
-    ImgNavComponent
+    ImgNavComponent,
+    HomeInicioComponent
   ]
 })
 export class KioskosModule { }
