@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Kiosko } from 'src/app/bebidas/interfaces/kiosko.inteface';
-import { KioskosService } from 'src/app/bebidas/services/kioskos.service';
+import { Kiosko } from 'src/app/kioskos/interfaces/kiosko.inteface';
+import { KioskosService } from 'src/app/kioskos/services/kioskos.service';
 
 @Component({
   selector: 'app-nav',

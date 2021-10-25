@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { ErrorPagComponent } from './error-pag/error-pag.component';
 
 
+
+
 @NgModule({
   declarations: [
     NavComponent,
