@@ -14,6 +14,7 @@ import { CrudComponent } from './pages/crud/crud.component';
 import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
 import { ImgNavComponent } from './componentes/img-nav/img-nav.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BebidasRoutingModule } from './bebidas-routing.module';
 
 
 
@@ -36,7 +37,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BebidasRoutingModule
   ],
   exports: [
     HomeComponent,

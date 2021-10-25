@@ -1,15 +1,37 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { KioskosComponent } from './pages/kioskos/kioskos.component';
+import { MapaPagComponent } from './pages/mapa-pag/mapa-pag.component';
+import { VerKioskoPagComponent } from './pages/ver-kiosko-pag/ver-kiosko-pag.component';
+import { CrudComponent } from './pages/crud/crud.component';
+import { HomeComponent } from './pages/home/home.component';
+
 
 const routes : Routes = [
   {
     path:'',
     children:[
       {
-        path:'',
-        redirectTo: 'login'
+        path: "",
+        component: HomeComponent,
       },
+      {
+        path: "kioskos",
+        component: KioskosComponent,
+      },
+      {
+        path: "mapaPag",
+        component: MapaPagComponent,
+      },
+      {
+        path: "kiosko/:id",
+        component: VerKioskoPagComponent,
+      },
+      {
+        path: "admin",
+        component:CrudComponent,
+      }
     ],
   }
 ]
@@ -17,7 +39,10 @@ const routes : Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(routes)
+  ], exports: [
+    RouterModule
   ]
 })
 export class BebidasRoutingModule { }
