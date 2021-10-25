@@ -20,7 +20,7 @@ html{
     width: 100%;
 }
 body{
-    background-image: url(assets/backblackwood.jpg); 
+    background: url(assets/backblackwood.jpg); 
     background-size: cover;
     background-attachment: fixed; // fijo fondo
     height: 100%;
@@ -28,29 +28,19 @@ body{
     font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
 
-
-//portada
-.container-main {
-  background-image: url(assets/portadaSatur.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  height: 55%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 footer{
 
   color: white;
   position: absolute;
-  width: 100%;
-  height: 300px;
+  width: 100vw;
+  height: 30vw;
   
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// boton login
+.mg-r-20{
+  margin-right: 20px;
 }
