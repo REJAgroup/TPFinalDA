@@ -11,7 +11,6 @@ import { MapaPagComponent } from './pages/mapa-pag/mapa-pag.component';
 import { SharedModule } from '../shared/shared.module';
 import { VerKioskoPagComponent } from './pages/ver-kiosko-pag/ver-kiosko-pag.component';
 import { CrudComponent } from './pages/crud/crud.component';
-import { ErrorPagComponent } from './pages/error-pag/error-pag.component';
 import { ComentariosComponent } from './componentes/comentarios/comentarios.component';
 import { ImgNavComponent } from './componentes/img-nav/img-nav.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -29,7 +28,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MapaPagComponent,
     VerKioskoPagComponent,
     CrudComponent,
-    ErrorPagComponent,
     ComentariosComponent,
     ImgNavComponent
   ],
@@ -50,7 +48,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MapaPagComponent,
     VerKioskoPagComponent,
     CrudComponent,
-    ErrorPagComponent,
     ComentariosComponent,
     ImgNavComponent
   ]

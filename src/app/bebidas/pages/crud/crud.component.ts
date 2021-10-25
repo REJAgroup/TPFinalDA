@@ -56,7 +56,7 @@ export class CrudComponent implements OnInit {
 
     crearKiosko(){
       //let kioskosss = this.formCreateKiosko?.value;
-     // console.log(kioskosss);
+     //console.log(kioskosss);
       this.__bebidasService.agregarKiosko(this.kiosko).subscribe(kiosko =>{
       this.mostrar();
       console.log(kiosko);

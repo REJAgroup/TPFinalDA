@@ -3,7 +3,7 @@
 
 <!-- Comentarios -->
 
-<div class="bg-white rounded shadow-sm p-4 mb-4 restaurant-detailed-ratings-and-reviews">
+<div *ngFor = "let comment of comentario" class="bg-white rounded shadow-sm p-4 mb-4 restaurant-detailed-ratings-and-reviews">
     <h4 class="mb-1">Reviews</h4>
     <div class="reviews-members pt-4 pb-4">
         <div class="media">
@@ -11,9 +11,10 @@
                 <div class="reviews-members-header text-black">
                     {{comment.comentario}}
                 </div>
-
                 <p>{{comment.calificacion}}/100</p>
             </div>
         </div>
     </div>
 </div>
+
+

@@ -5,12 +5,16 @@ import { HomeComponent } from "./bebidas/pages/home/home.component";
 import { KioskosComponent } from "./bebidas/pages/kioskos/kioskos.component";
 import { MapaPagComponent } from "./bebidas/pages/mapa-pag/mapa-pag.component";
 import { VerKioskoPagComponent } from "./bebidas/pages/ver-kiosko-pag/ver-kiosko-pag.component";
+import { ErrorPagComponent } from "./shared/error-pag/error-pag.component";
 
 const routes: Routes = [
     {
       path: "",
       component: HomeComponent,
-      pathMatch: 'full'
+    },
+    {
+      path: "auth",
+      loadChildren: () => import('./auth/auth.module'). then (m => m.AuthModule)
     },
     {
       path: "kioskos",
@@ -29,8 +33,12 @@ const routes: Routes = [
       component:CrudComponent,
     },
     {
+      path: "404",
+      component: ErrorPagComponent,
+    },
+    {
       path: '**',
-      redirectTo: ''
+      redirectTo: '404',
     }  
 ]
 
