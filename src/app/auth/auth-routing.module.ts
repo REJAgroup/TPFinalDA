@@ -8,7 +8,6 @@ import { HomeComponent } from '../kioskos/pages/home/home.component';
 const routes : Routes = [
   {
     path:'',
-    component: HomeComponent,
     children:[
       {
         path:'login',

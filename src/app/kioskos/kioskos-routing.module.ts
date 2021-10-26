@@ -12,29 +12,23 @@ import { HomeInicioComponent } from './pages/home-inicio/home-inicio.component';
 const routes : Routes = [
   {
     path:'',
-    component: HomeComponent, 
-    children:[
-      {
-        path: "inicio",
-        component: HomeInicioComponent,
-      },
-      {
-        path: "kioscos",
-        component: KioskosComponent,
-      },
-      {
-        path: "mapa",
-        component: MapaPagComponent,
-      },
-      {
-        path: "kiosko/:id",
-        component: VerKioskoPagComponent,
-      },
-      {
-        path: "admin",
-        component:CrudComponent,
-      }
-    ],
+    component: HomeInicioComponent,
+  },
+  {
+    path: "kioscos",
+    component: KioskosComponent,
+  },
+  {
+    path: "mapa",
+    component: MapaPagComponent,
+  },
+  {
+    path: "kiosko/:id",
+    component: VerKioskoPagComponent,
+  },
+  {
+    path: "admin",
+    component:CrudComponent,
   }
 ]
 
