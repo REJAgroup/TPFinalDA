@@ -1,6 +1,7 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
 import { HomeInicioComponent } from "./kioskos/pages/home-inicio/home-inicio.component";
+import { ErrorPagComponent } from "./shared/error-pag/error-pag.component";
 
 const routes: Routes = [
     {
