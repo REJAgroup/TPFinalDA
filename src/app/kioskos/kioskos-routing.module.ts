@@ -8,6 +8,7 @@ import { CrudComponent } from './pages/crud/crud.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HomeInicioComponent } from './pages/home-inicio/home-inicio.component';
 import { LoginGuard } from '../shared/guards/LoginGuards';
+import { AdminGuard } from '../shared/guards/AdminGuards';
 
 
 const routes : Routes = [
@@ -34,7 +35,7 @@ const routes : Routes = [
       {
         path: "admin",
         component:CrudComponent,
-        canActivate: [LoginGuard]
+        canActivate: [LoginGuard, AdminGuard]
       }
     ],
   }
@@ -50,7 +51,7 @@ const routes : Routes = [
   ],
   providers: [
     LoginGuard,
-   // AdminGuard
+    AdminGuard
   ]
 })
 export class KioskosRoutingModule { }
