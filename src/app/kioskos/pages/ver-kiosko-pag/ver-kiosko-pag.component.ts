@@ -37,13 +37,11 @@ export class VerKioskoPagComponent implements OnInit {
     this.__commentService.mostrarComment().subscribe(comen => {
     this.comentarios=comen
       });
-      
-      
-      this.formCreateKiosko = this.formBuilder.group({
-        "comentario": new FormControl(),
-        "calificacion": new FormControl(),
-     
-      });
+    
+    this.formCreateKiosko = this.formBuilder.group({
+      "comentario": new FormControl(),
+      "calificacion": new FormControl(),
+    });
 
   }
 

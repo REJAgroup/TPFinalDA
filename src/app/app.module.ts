@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from "@angular/common/http";
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
-import { KioskosModule } from './kioskos/kioskos.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { KioskosModule } from './kioskos/kioskos.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -16,9 +18,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     HttpClientModule,
     SharedModule,
-    KioskosModule,
     AppRoutingModule,
-    BrowserAnimationsModule 
+    BrowserAnimationsModule ,
+    ReactiveFormsModule,
+    FormsModule     
   ],
   providers: [],
   bootstrap: [AppComponent]

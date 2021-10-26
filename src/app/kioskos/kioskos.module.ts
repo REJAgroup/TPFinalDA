@@ -21,6 +21,7 @@ import { KioskosRoutingModule } from './kioskos-routing.module';
 @NgModule({
   declarations: [
     HomeComponent,
+    HomeInicioComponent,
     PortadaComponent,
     MapaComponent,
     CardKiosComponent,
@@ -29,8 +30,7 @@ import { KioskosRoutingModule } from './kioskos-routing.module';
     VerKioskoPagComponent,
     CrudComponent,
     ComentariosComponent,
-    ImgNavComponent,
-    HomeInicioComponent
+    ImgNavComponent
   ],
   imports: [
     CommonModule,
@@ -42,6 +42,7 @@ import { KioskosRoutingModule } from './kioskos-routing.module';
   ],
   exports: [
     HomeComponent,
+    HomeInicioComponent,
     PortadaComponent,
     MapaComponent,
     CardKiosComponent,
@@ -50,8 +51,7 @@ import { KioskosRoutingModule } from './kioskos-routing.module';
     VerKioskoPagComponent,
     CrudComponent,
     ComentariosComponent,
-    ImgNavComponent,
-    HomeInicioComponent
+    ImgNavComponent
   ]
 })
 export class KioskosModule { }

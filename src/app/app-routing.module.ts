@@ -16,7 +16,7 @@ const routes: Routes = [
     },
     {
       path: "",
-      component: HomeComponent,
+      component: HomeInicioComponent,
     },
     {
       path: "404",

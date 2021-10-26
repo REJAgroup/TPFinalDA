@@ -7,30 +7,34 @@ import { VerKioskoPagComponent } from './pages/ver-kiosko-pag/ver-kiosko-pag.com
 import { CrudComponent } from './pages/crud/crud.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HomeInicioComponent } from './pages/home-inicio/home-inicio.component';
-import { LoginGuard } from '../shared/guards/LoginGuards';
 
 
 const routes : Routes = [
   {
     path:'',
-    component: HomeInicioComponent,
-  },
-  {
-    path: "kioscos",
-    component: KioskosComponent,
-  },
-  {
-    path: "mapa",
-    component: MapaPagComponent,
-  },
-  {
-    path: "kiosko/:id",
-    component: VerKioskoPagComponent,
-  },
-  {
-    path: "admin",
-    component:CrudComponent,
-    canActivate: [LoginGuard]
+    component: HomeComponent, 
+    children:[
+      {
+        path: "inicio",
+        component: HomeInicioComponent,
+      },
+      {
+        path: "kioscos",
+        component: KioskosComponent,
+      },
+      {
+        path: "mapa",
+        component: MapaPagComponent,
+      },
+      {
+        path: "kioskos/kioscos/:id",
+        component: VerKioskoPagComponent,
+      },
+      {
+        path: "admin",
+        component:CrudComponent,
+      }
+    ],
   }
 ]
 
@@ -41,10 +45,6 @@ const routes : Routes = [
     RouterModule.forChild(routes)
   ], exports: [
     RouterModule
-  ],
-  providers: [
-    LoginGuard,
-   // AdminGuard
   ]
 })
 export class KioskosRoutingModule { }

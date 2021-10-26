@@ -12,4 +12,5 @@ export class ErrorPagComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
 }
