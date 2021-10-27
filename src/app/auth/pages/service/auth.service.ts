@@ -8,10 +8,15 @@ import {HttpClient} from "@angular/common/http";
 })
 export class AuthService {
 
-  private baseUrl :string = "https://614ba83ee4cc2900179eb18b.mockapi.io/usuarios ";
+  private baseUrl :string = "https://614ba83ee4cc2900179eb18b.mockapi.io/usuarios";
   constructor(private http: HttpClient) { }
 
   login(usuario:string):Observable<Usuario[]> {
     return this.http.get<Usuario[]>(`${this.baseUrl}/?name=${usuario}`)
-  }
+
+ }
+ agregarRegistro(usuario:Usuario): Observable<Usuario>{
+  return this.http.post<Usuario>(`${this.baseUrl}`, usuario);
+}
+
 }
