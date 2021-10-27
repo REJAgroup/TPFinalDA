@@ -1,9 +1,18 @@
 
 <<div class="login">
 	<h1>Login</h1>
-    <form method="post">
-    	<input type="text" name="u" placeholder="Usuario" required="required" />
-        <input type="" name="p" placeholder="contraseña" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">iniciar sesion.</button>
-    </form>
+    <form [formGroup]="form" autocomplete="off">
+        <div class="form-group">
+          <label>Usuario</label>
+          <input formControlName="name" #usuario type="text" class="form-control" id="usuario" aria-describedby="emailHelp"
+                 placeholder="Ingrese su usuario" required>
+        </div>
+        <div class="form-group">
+          <input type="password" formControlName="password" #password class="form-control" id="password" placeholder="Ingrese su contraseña"
+                 required>
+                 <button (click)='login()'>iniciar </button>
+        </div>
+        <!--  <p class="text-danger-login rounded">{{mensajeError}}</p> -->
+         
+      </form>
 </div>

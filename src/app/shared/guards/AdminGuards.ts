@@ -12,7 +12,7 @@ export class AdminGuard implements CanActivate {
   canActivate() {
     let usuario: UsuarioDTO = JSON.parse(<string>localStorage.getItem('usuario'));
     if (!usuario.admin) {
-      this.router.navigate(['/crud']);
+      this.router.navigate(['/kioskos/admin']);
       return false;
     }
     return true;
