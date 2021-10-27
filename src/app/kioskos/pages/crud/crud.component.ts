@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Kiosko } from '../../interfaces/kiosko.inteface';
 import { KioskosService } from '../../services/kioskos.service';
 
@@ -59,10 +59,15 @@ export class CrudComponent implements OnInit {
      //console.log(kioskosss);
       this.__kioskosService.agregarKiosko(this.kiosko).subscribe(kiosko =>{
       this.mostrar();
+      this.formCreateKiosko = this.formBuilder.group({
+        "name": new FormControl([Validators.required, Validators.minLength(5), Validators.maxLength(50)]),
+        "descripcion": new FormControl([Validators.required, Validators.minLength(5), Validators.maxLength(100)]),
+        "avatar": new FormControl([Validators.required, Validators.minLength(10), Validators.maxLength(100)])
+      });
       console.log(kiosko);
       })
     }
-
+   
     id(id:string){
       this.__kioskosService.verKioskio(id).subscribe(kiosko => {
         this.kiosko = kiosko;
