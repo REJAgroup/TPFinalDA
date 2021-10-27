@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Kiosko } from 'src/app/kioskos/interfaces/kiosko.inteface';
 import { KioskosService } from 'src/app/kioskos/services/kioskos.service';
 
@@ -15,7 +16,7 @@ export class NavComponent implements OnInit {
   hayBusqueda: boolean = false;
   kioskos : Kiosko[] = [];  
 
-  constructor(private __kioskosService : KioskosService) { }
+  constructor(private __kioskosService : KioskosService, private router : Router) { }
 
   ngOnInit(): void {
   }
@@ -37,6 +38,11 @@ export class NavComponent implements OnInit {
 
   mostrarItems(){
     this.estoyHome = true;
+  }
+
+  salir() {
+    localStorage.removeItem("usuario");
+    this.router.navigate([":/:/"])
   }
 
 }

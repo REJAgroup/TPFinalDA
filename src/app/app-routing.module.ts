@@ -15,16 +15,8 @@ const routes: Routes = [
       loadChildren: () => import('./kioskos/kioskos.module'). then (m => m.KioskosModule)
     },
     {
-      path: "",
-      component: HomeComponent,
-    },
-    {
-      path: "404",
-      component: ErrorPagComponent,
-    },
-    {
       path: '**',
-      redirectTo: '404',
+      redirectTo: 'kioskos',
     }
 ]
 

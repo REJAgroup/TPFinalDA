@@ -17,7 +17,7 @@ const routes : Routes = [
     component: HomeComponent, 
     children:[
       {
-        path: "inicio",
+        path: "",
         component: HomeInicioComponent,
       },
       {
@@ -36,6 +36,10 @@ const routes : Routes = [
         path: "admin",
         component:CrudComponent,
         canActivate: [LoginGuard, AdminGuard]
+      },
+      {
+        path: '**',
+        redirectTo: 'inicio',
       }
     ],
   }

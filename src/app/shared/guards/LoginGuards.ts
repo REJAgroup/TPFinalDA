@@ -11,7 +11,7 @@ export class LoginGuard implements CanActivate {
   canActivate() {
     let usuario: UsuarioDTO = JSON.parse(<string>localStorage.getItem('usuario'));
     if (usuario == null) {
-        this.router.navigate(['/auth/pages/login']);
+        this.router.navigate(['/auth/login']);
         return false;
     }
     return true;

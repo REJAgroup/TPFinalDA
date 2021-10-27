@@ -20,12 +20,13 @@
       <a class="navbar-brand remove-bg" routerLink="/kioskos/admin" routerLinkActive="active">
         <img src="/assets/user_admin.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
       </a> 
-      <div class="d-flex" (onEnter)="buscar(termino.value)" autocomplete="off">
-        <input #termino class="form-control me-2" type="text" name= "termino" placeholder="Qué buscamos?" aria-label="Search">
-        <button class="btn btn-outline-light" type="text" (click)="buscar(termino.value)">Buscar</button>
-      </div>
+     
     </div>
   </div>
+
+  <button class="btn btn-outline-light mg-r-20" (click)="salir()">
+    Salir
+    </button>
 </nav>
 
 

@@ -1,11 +1,12 @@
-<<div class="login">
-	<h1>Registrarse</h1>
-    <form [formGroup] = "form">
-
-        <input formControlName="name" #usuario type="text" class="form-control" id="usuario" aria-describedby="emailHelp"
-        placeholder="Ingrese su usuario" required>
-        <input type="password" formControlName="password" #password class="form-control" id="password" placeholder="Ingrese su contraseña"
-                 required>
-        <button type="submit" class="btn btn-primary btn-block btn-large" (click)="registrar()">Registrar</button>
-    </form>
+<div class="centrardiv">
+    <div class="centraryfondodiv">
+        <h1 class="margenesH1">Registrarse</h1>
+        <form [formGroup] = "form">
+            <input formControlName="name" #usuario type="text" class="form-control" id="usuario" aria-describedby="emailHelp"
+            placeholder="usuario" required>
+            <input type="password" formControlName="password" #password class="form-control" id="password" placeholder="contraseña"
+                        required>
+            <button type="submit" class="btn btn-primary btn-block btn-large margenesbotREG" (click)="registrar()">Registrar</button>
+        </form>
+    </div>
 </div>

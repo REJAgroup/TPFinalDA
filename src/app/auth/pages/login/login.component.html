@@ -1,12 +1,13 @@
-<<div class="login">
-	<h1>Login</h1>
-    <form [formGroup] = "form">
-
-        <input formControlName="name" #usuario type="text" class="form-control" id="usuario" aria-describedby="emailHelp"
-        placeholder="Ingrese su usuario" required>
-        <input type="password" formControlName="password" #password class="form-control" id="password" placeholder="Ingrese su contraseña"
-                 required>
-        <button type="submit" class="btn btn-primary btn-block btn-large" (click)="login()">Iniciar sesion.</button>
-        <p> ¿Quieres crear una nueva cuenta? <a routerLink="/auth/register">Registrarse</a></p>
-    </form>
-</div>
+<div class="centrardiv">
+    <div class="centraryfondodiv">
+      <h1 class="margenesH1">Login</h1>
+      <form [formGroup] = "form">
+          <input formControlName="name" #usuario type="text" class="form-control" id="usuario" aria-describedby="emailHelp"
+          placeholder="Ingrese su usuario" required>
+          <input type="password" formControlName="password" #password class="form-control" id="password" placeholder="Ingrese su contraseña"
+                   required>
+          <button type="submit" class="btn btn-primary btn-block btn-large" (click)="login()">Iniciar sesion</button>
+          <p class="margenesREG"> ¿Quieres crear una nueva cuenta? <a routerLink="/auth/register">Registrarse</a></p>
+      </form>
+    </div>
+  </div>
