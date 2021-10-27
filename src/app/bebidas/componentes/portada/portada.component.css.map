@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,CAAA;EACA,KAAK,EAAE,KAAK;CACf;;AACD,AAAA,YAAY,CAAA;EACR,UAAU,EAAE,MAAM;CACrB;;AACD,AAAA,eAAe,CAAA;EACX,UAAU,EAAE,MAAM;CACrB",
-    "sources": [
-        "portada.component.scss"
-    ],
-    "names": [],
-    "file": "portada.component.css"
-}

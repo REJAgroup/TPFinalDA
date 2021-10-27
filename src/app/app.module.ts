@@ -4,21 +4,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from "@angular/common/http";
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
-import { BebidasModule } from './bebidas/bebidas.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { KioskosModule } from './kioskos/kioskos.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
     AppComponent
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     SharedModule,
-    BebidasModule,
     AppRoutingModule,
-    BrowserAnimationsModule 
+    BrowserAnimationsModule ,
+    ReactiveFormsModule,
+    FormsModule     
   ],
   providers: [],
   bootstrap: [AppComponent]

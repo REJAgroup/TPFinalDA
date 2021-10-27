@@ -1,0 +1,20 @@
+<link href="../comentarios/comentarios.component.scss" rel="stylesheet">
+<script href="../comentarios/comentarios.component.ts" type="text/javascript"></script>
+
+<!-- Comentarios -->
+
+<div *ngFor = "let comment of comentario" class="bg-white rounded shadow-sm p-4 mb-4 restaurant-detailed-ratings-and-reviews">
+    <h4 class="mb-1">Reviews</h4>
+    <div class="reviews-members pt-4 pb-4">
+        <div class="media">
+            <div class="media-body">
+                <div class="reviews-members-header text-black">
+                    {{comment.comentario}}
+                </div>
+                <p>{{comment.calificacion}}/100</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+

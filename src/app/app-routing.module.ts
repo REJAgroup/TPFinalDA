@@ -1,23 +1,31 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
-import { HomeComponent } from "./bebidas/pages/home/home.component";
-import { InfoPagComponent } from "./bebidas/pages/info-pag/info-pag.component";
+import { HomeInicioComponent } from "./kioskos/pages/home-inicio/home-inicio.component";
+import { HomeComponent } from "./kioskos/pages/home/home.component";
+import { ErrorPagComponent } from "./shared/error-pag/error-pag.component";
 
 
 const routes: Routes = [
     {
-      path: "",
-      component: HomeComponent,
-      pathMatch: 'full'
+      path: "auth",
+      loadChildren: () => import('./auth/auth.module'). then (m => m.AuthModule)
     },
     {
-      path: "infoPag",
-      component: InfoPagComponent,
+      path: "kioskos",
+      loadChildren: () => import('./kioskos/kioskos.module'). then (m => m.KioskosModule)
+    },
+    {
+      path: "",
+      component: HomeInicioComponent,
+    },
+    {
+      path: "404",
+      component: ErrorPagComponent,
     },
     {
       path: '**',
-      redirectTo: ''
-    }  
+      redirectTo: '404',
+    }
 ]
 
 @NgModule({
@@ -31,3 +39,4 @@ const routes: Routes = [
   })
   export class AppRoutingModule {
   }
+ 

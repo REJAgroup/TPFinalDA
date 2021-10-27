@@ -20,25 +20,27 @@ html{
     width: 100%;
 }
 body{
-    background-image: url(assets/backblackwood.jpg); 
+    background: url(assets/backblackwood.jpg); 
     background-size: cover;
     background-attachment: fixed; // fijo fondo
     height: 100%;
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
 
+footer{
 
-//portada
-.container-main{
-    background-image: url(assets/portadaSatur.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    height: 55%;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-
+  color: white;
+  position: absolute;
+  width: 100vw;
+  height: 30vw;
+  
 }
-
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// boton login
+.mg-r-20{
+  margin-right: 20px;
+}

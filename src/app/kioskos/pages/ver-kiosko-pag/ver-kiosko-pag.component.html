@@ -1,0 +1,37 @@
+
+<div class="container">
+    <div class="container ">
+        <h1 class="text-white espacios ">{{verKioskos?.name}}</h1>
+        <h2 class="text-white espacios ">{{verKioskos?.descripcion}}</h2> 
+        <img src="{{verKioskos?.avatar}}" alt="">
+    </div>
+    <h1 class="text-center text-white espacios ">Comentarios</h1>
+   
+    <div class="container espacios bg" >
+        <app-comentarios [comentario] = comentarios></app-comentarios>
+    </div>
+      <!-- Ingreso Comentarios -->
+    <div class="row bg-white">
+        <form class="container p-3 my-3 divForm" >
+            <h4>Cuéntanos tu experiencia</h4>
+            <div  class="col-12"> 
+                <form *ngIf="formCreateKiosko" class="container p-3 my-3 bg-dark text-white text-center" [formGroup]="formCreateKiosko">
+                    <input [(ngModel)] = "comment.comentario" type="text" class="form-control"  formControlName="comentario" >
+                    <input [(ngModel)] = "comment.calificacion" type="text" class="form-control"  formControlName="calificacion" >
+                </form>
+                
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                <br><button type="submit" class="btn btn-primary" id="crearComentario" (click) = "crearComentario()"  >
+                    Enviar</button>
+                </div>
+            </div>
+        </form> 
+    </div>
+</div>
+
+
+
+

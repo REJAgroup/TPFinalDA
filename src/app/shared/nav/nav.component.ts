@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Kiosko } from 'src/app/kioskos/interfaces/kiosko.inteface';
+import { KioskosService } from 'src/app/kioskos/services/kioskos.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  estoyHome: boolean = true;
+  termino:string = '';
+  hayError: boolean = false;
+  hayBusqueda: boolean = false;
+  kioskos : Kiosko[] = [];  
+
+  constructor(private __kioskosService : KioskosService) { }
 
   ngOnInit(): void {
+  }
+
+  buscar(termino: string) {
+    this.hayError = false;
+    this.hayBusqueda = true;
+    this.termino = termino;
+    console.log("valor", termino);
+    this.__kioskosService.buscarKiosko(termino).subscribe(resp => {
+      console.log(resp);
+      this.kioskos = resp;
+    }, error => {
+      console.error("tuve un error: " + error);
+      this.hayError = true;
+      this.kioskos = [];
+    })
+  }
+
+  mostrarItems(){
+    this.estoyHome = true;
   }
 
 }

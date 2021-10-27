@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav/nav.component';
-import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { ErrorPagComponent } from './error-pag/error-pag.component';
+
 
 
 
 @NgModule({
   declarations: [
     NavComponent,
-    MenuComponent,
-    FooterComponent
+    FooterComponent,
+    ErrorPagComponent
   ],
   imports: [
     CommonModule,
@@ -19,8 +20,8 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [
     NavComponent,
-    MenuComponent,
-    FooterComponent
+    FooterComponent,
+    ErrorPagComponent
   ]
 })
 export class SharedModule { }
