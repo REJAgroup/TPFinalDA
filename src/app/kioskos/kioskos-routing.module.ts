@@ -14,7 +14,7 @@ import { AdminGuard } from '../shared/guards/AdminGuards';
 const routes : Routes = [
   {
     path:'',
-    component: HomeInicioComponent, 
+    component: HomeComponent, 
     children:[
       {
         path: "inicio",
