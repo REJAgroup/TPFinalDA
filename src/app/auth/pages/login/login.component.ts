@@ -30,12 +30,14 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("Entre al login");
-    this.login()
+    
   }
 
   login() {
     console.log(this.form.value.name)
+    console.log(this.form.value.password)
     this.authService.login(this.form.value.name).subscribe(usuarios => {
+      console.log(usuarios);
       if (usuarios) {
         usuarios.map(usuario => {
           if (usuario.name === this.form.value.name) {
@@ -43,7 +45,7 @@ export class LoginComponent implements OnInit {
               let usuarioDTO:UsuarioDTO = usuario;
               delete usuarioDTO.password
               localStorage.setItem('usuario',JSON.stringify(usuarioDTO))
-              this.router.navigate(['/crud'])
+              this.router.navigate(['/kioskos/admin'])
             }
           }
         })
@@ -51,8 +53,9 @@ export class LoginComponent implements OnInit {
         //mostras error usuario
       }
     })
+  }  
+  
+
   }
 
 
-
-}
