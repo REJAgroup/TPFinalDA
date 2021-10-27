@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UsuarioDTO } from '../interfaces/Usuario';
+import { UsuarioDTO } from '../interfaces/Usuario.interface';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
               let usuarioDTO:UsuarioDTO = usuario;
               delete usuarioDTO.password
               localStorage.setItem('usuario',JSON.stringify(usuarioDTO))
-              this.router.navigate(['/heroes'])
+              this.router.navigate(['/crud'])
             }
           }
         })

@@ -50,7 +50,6 @@ import { KioskosRoutingModule } from './kioskos-routing.module';
     MapaPagComponent,
     VerKioskoPagComponent,
     CrudComponent,
-    ComentariosComponent,
     ImgNavComponent
   ]
 })
