@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,EAAE,CAAA;EACE,KAAK,EAAG,KAAK;CAChB;;AACD,AAAA,EAAE,CAAA;EACE,KAAK,EAAG,KAAK;CAChB;;AAED,AAAA,GAAG,CAAA;EACC,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,IAAI;CACf;;AAED,AAAA,SAAS,CAAA;EACL,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,IAAI;CACtB;;AACD,AAAA,GAAG,CAAA;EACC,gBAAgB,EAAE,KAAK;CAC1B",
+    "sources": [
+        "ver-kiosko-pag.component.scss"
+    ],
+    "names": [],
+    "file": "ver-kiosko-pag.component.css"
+}

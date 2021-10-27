@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Prompt:wght@600&display=swap");
+.container-main {
+  background-image: url(../../../../assets/portadaSatur.jpg);
+  background-attachment: fixed;
+  height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-size: 120% 120%;
+  background-repeat: no-repeat;
+  -webkit-animation: move 10s infinite linear alternate;
+          animation: move 10s infinite linear alternate;
+  position: relative;
+  border-bottom: #9a9c00cc 5px solid;
+}
+
+@-webkit-keyframes move {
+  from {
+    background-position: bottom left;
+  }
+  to {
+    background-position: top right;
+  }
+}
+
+@keyframes move {
+  from {
+    background-position: bottom left;
+  }
+  to {
+    background-position: top right;
+  }
+}
+
+.row {
+  color: white;
+}
+
+.titulo_port {
+  text-align: center;
+  font-family: 'Prompt', sans-serif;
+  font-size: 65px;
+  font-weight: 100px;
+  -webkit-animation: cambio-color 3s infinite alternate;
+          animation: cambio-color 3s infinite alternate;
+  text-shadow: 1px 0px #e6e6e6, 2px 2px 0px #c8c8c8, 3px 3px 0px #b4b4b4, 4px 4px 0px #a0a0a0, 5px 5px 0px #e6e6e6, 8px 8px 20px rgba(230, 230, 230, 0.5);
+}
+
+@-webkit-keyframes cambio-color {
+  from {
+    color: #000000;
+  }
+  to {
+    color: #c4c702cc;
+  }
+}
+
+@keyframes cambio-color {
+  from {
+    color: #000000;
+  }
+  to {
+    color: #c4c702cc;
+  }
+}
+
+.subtitulo_port {
+  text-align: center;
+  font-family: 'Cairo', sans-serif;
+  font-size: 30px;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=portada.component.css.map */

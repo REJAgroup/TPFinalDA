@@ -1,0 +1,14 @@
+.row.container {
+  margin: 0;
+  display: table;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+col {
+  margin: auto;
+}
+/*# sourceMappingURL=app.component.css.map */

@@ -1,0 +1,36 @@
+.BGcontKioskos {
+  background-color: #212529;
+  border-radius: 30px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.paddings-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.display-5 {
+  padding: 10px 20px;
+  background: none;
+  color: #ffffff;
+  margin-top: 20px;
+  -webkit-transition: background 300ms;
+  transition: background 300ms;
+  text-align: center;
+  font-size: 30px;
+}
+
+.display-5:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.display-line-height {
+  height: 0.1rem;
+}
+/*# sourceMappingURL=kioskos.component.css.map */
