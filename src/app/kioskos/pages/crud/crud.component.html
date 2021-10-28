@@ -1,12 +1,10 @@
-
-<a class="text-white" routerLink="">Volver</a><br>
 <br>
-
+<div class="container">
     <table class="table">
         <thead>
           <tr class = "table-dark text-center">
             <th scope="col">Nombre</th>
-            <th scope="col">Avatar</th>
+            <th scope="col">Imagen</th>
             <th scope="col">Descripcion</th>
             <th scope="col">Editar</th>
             <th scope="col">Eliminar</th>
@@ -16,7 +14,7 @@
           <tr *ngFor="let kiosko of kioskos" class="table-light text-center">
             <td>{{kiosko.name}}</td>
             <td><img [src]="kiosko.avatar" [alt]="kiosko.name" class="rounded-circle" width="50px" height="50px"></td>
-           
+
             <td>{{kiosko.descripcion}}</td>
             <td><button type="button" class="btn btn-primary btn-sm"(click) = "id(kiosko.id)">Editar</button></td>
             <td><button type="button" class="btn btn-danger btn-sm" (click) = "eliminar(kiosko.id)">Eliminar</button></td>
@@ -24,20 +22,19 @@
 
         </tbody>
       </table>
-
-
+</div>
 <form  *ngIf="formCreateKiosko" class="container p-3 my-3 bg-dark text-white text-center" [formGroup]="formCreateKiosko">
   <div  class="col-12">
-    <label class="form-label">Nombre</label>
-    <input [(ngModel)] = "kiosko.name" type="text" class="form-control" formControlName="name">
+    <label class="form-label">Nombres</label>
+    <input [(ngModel)] = "kiosko.name" type="text" class="form-control" formControlName="name" placeholder="Accede el nombre del almacén">
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">Descripcion</label>
-    <input [(ngModel)] = "kiosko.descripcion" type="text" class="form-control" formControlName="descripcion">
+    <input [(ngModel)] = "kiosko.descripcion" type="text" class="form-control" formControlName="descripcion" placeholder="Agrega una descripción">
   </div>
   <div class="col-12">
-    <label for="inputCity" class="form-label">Avatar</label>
-    <input [(ngModel)] = "kiosko.avatar" type="text" class="form-control" formControlName="avatar">
+    <label for="inputCity" class="form-label">Imagen</label>
+    <input [(ngModel)] = "kiosko.avatar" type="text" class="form-control" formControlName="avatar" placeholder="Agregar un link de imagen. Ej:  simpons.jpg">
   </div>
   <div class="row">
     <div class="col-12">
@@ -47,4 +44,5 @@
         Editar</button>
     </div>
   </div>
+
 </form> <br>
